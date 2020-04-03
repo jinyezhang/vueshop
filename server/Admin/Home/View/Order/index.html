@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function CheckAll(form)
+{
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled!=true)
+       e.checked = form.chkAll.checked;
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu"></div>
+<div class="alterdiv"></div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post"  action="__URL__/del">
+    <div id="navdiv">
+        <table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="41" class="linkblue">&nbsp;&nbsp;&nbsp;您当前的位置：订单管理</td>
+    <td width="65%" class="linkblue">筛选：<select name="screen" id="screen">
+    	<option value="1" <if condition="$screen eq '1'"> selected="selected" </if>>订单编号</option>
+        <option value="2" <if condition="$screen eq '2'"> selected="selected" </if> >手机号</option>
+      </select>&nbsp;&nbsp;<input type="text" name="kwords" id="kwords" class="htinputcss" /><input type="button" name="button3" id="button3" value="搜索" class="ssbtn" onClick="this.form.action='__URL__';this.form.submit()" onFocus="this.blur()" />
+    </td>
+    </tr>
+</table>
+    </div>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2" class="backfont">
+  <tr bgcolor="#f7f7f7">
+    <td width="5%" height="28" align="center"><input type="checkbox" onclick="CheckAll(this.form)" name="chkAll" value="checkbox" /></td>
+    <td width="8%" align="center">订单编号</td>
+    <td align="center">会员手机号</td>
+    <td align="center">联系人</td>
+    <td align="center">联系人手机号</td>
+    <td  align="center" class="linkblue"><if condition="$otime eq 'desc'"><a href="__URL__?otime=asc">订购时间 ˇ</a><else /><a href="__URL__?otime=desc">订购时间 ˆ</a></if></td>
+    <td  align="center" class="linkblue"><if condition="$paytype eq 'desc'"><a href="__URL__?paytype=asc">支付类型 ˇ</a><else /><a href="__URL__?paytype=desc">支付类型 ˆ</a></if></td>
+    <td align="center" class="linkblue"><if condition="$status eq 'desc'"><a href="__URL__?status=asc">订单状态 ˇ</a><else /><a href="__URL__?status=desc">订单状态 ˆ</a></if></td>
+    <td align="center">是否评价</td>
+    <td width="12%" align="center">管理</td>
+    </tr>
+<volist name="datalist" id="vo">
+  <tr bgcolor="#FFFFFF" onmouseover="this.style.backgroundColor='#f7f7f7'" onmouseout="this.style.background='#FFFFFF'">
+    <td height="52" align="center"><input type="checkbox" name="del[]" value="{?$vo.ordernum?}" /></td>
+    <td align="center">{?$vo.ordernum?}</td>
+    <td align="center">{?$vo['ucellphone']?}</td>
+    <td align="center">{?$vo[name]?}</td>
+    <td align="center">{?$vo[cellphone]?}</td>
+    <td align="center">{?$vo.times?}</td>
+    <td align="center">
+    <if condition="$vo['paytype'] eq '1'">
+    	<font color="#0000FF">支付宝</font>
+    <elseif condition="$vo['paytype'] eq '2'" />
+    	<font color="#00CC33">微信支付</font>
+    <elseif condition="$vo['paytype'] eq '3'" />
+    	<font color="#33CCFF">银联</font>
+    <else />
+    	--
+    </if>
+    </td>
+    <td align="center">
+    <if condition="$vo['status'] eq '0'">
+    	待付款
+    <elseif condition="$vo['status'] eq '1'" />
+    	<font color="#009966">待收货</font>
+    <elseif condition="$vo['status'] eq '-1'" />
+    	<font color="#FF0000">取消订单</font>
+    <elseif condition="$vo['status'] eq '2'" />
+    	<font color="#FF00FF">已收货</font>
+    </if>
+    </td>
+    <td align="center">
+    <if condition="$vo['iscomm'] eq '1'">
+    	<font color="#0000FF">已评价</font>
+    <else />
+    	<font color="#FF0000">未评价</font>
+    </if>
+    </td>
+    <td align="center">
+    <a href="__URL__/desc?id={?$vo.ordernum?}&page={?$page?}{?$strname?}" class="editblue">订单详情</a></td>
+    </tr>
+</volist>
+  <tr bgcolor="#FFFFFF">
+    <td height="52" colspan="13" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delbtn" id="delbtn" class="delbtn" value="删除" onclick="return confirm('确认要删除吗？')" />&nbsp;&nbsp;<if condition="$gid eq '1'"><input type="submit" name="delbtn" class="delbtn" value="取消订单" onClick="this.form.action='__URL__?action=orderstatus&status=-1';this.form.submit();" onFocus="this.blur()" />&nbsp;&nbsp;<input type="submit" name="delbtn" class="delbtn" value="待付款" onClick="this.form.action='__URL__?action=orderstatus&status=0';this.form.submit();" onFocus="this.blur()" />&nbsp;&nbsp;<input type="submit" name="delbtn" class="delbtn" value="待收货" onClick="this.form.action='__URL__?action=orderstatus&status=1';this.form.submit();" onFocus="this.blur()" />&nbsp;<input type="submit" name="delbtn" class="delbtn" value="已收货" onClick="this.form.action='__URL__?action=orderstatus&status=2';this.form.submit();" onFocus="this.blur()" /></if></td>
+    </tr>
+</table>
+</form>
+</div>
+<div id="pagediv">
+    {?$getpage?}
+</div>
+</body>
+</html>

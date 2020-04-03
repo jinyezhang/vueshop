@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function check(){
+	if (document.form1.smtp.value.match(/^\s*$/)){
+		alert ("请输入SMTP主机地址");
+		document.form1.smtp.focus();
+		return false;
+	}
+	if (document.form1.port.value.match(/^\s*$/)){
+		alert ("请输入端口");
+		document.form1.port.focus();
+		return false;
+	}
+	if (document.form1.username.value.match(/^\s*$/)){
+		alert ("请输入用户名");
+		document.form1.username.focus();
+		return false;
+	}
+	if (document.form1.pwd.value.match(/^\s*$/)){
+		alert ("请输入密码");
+		document.form1.pwd.focus();
+		return false;
+	}
+	if (document.form1.smtpuser.value.match(/^\s*$/)){
+		alert ("请输入身份验证");
+		document.form1.smtpuser.focus();
+		return false;
+	}
+	if (document.form1.title.value.match(/^\s*$/)){
+		alert ("请输入邮件标题");
+		document.form1.title.focus();
+		return false;
+	}
+	if (document.form1.content.value.match(/^\s*$/)){
+		alert ("请输入邮件内容");
+		document.form1.content.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><include file="Public/findmenu" /></div>
+</div>
+<div class="alterdiv"></div>
+<form name="form1" id="form1" method="post" action="__URL__/modmail" onsubmit="return check()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:20px;">
+  <tr>
+    <td width="37%" height="40" align="right"><font color="#FF0000">*</font> SMTP主机地址：</td>
+    <td width="63%"><input type="text" name="smtp" id="smtp" class="htinputcss" value="{?$data.smtp?}" />&nbsp;(示例：smtp.qq.com)</td>
+  </tr>
+  <tr>
+    <td height="40" align="right"><font color="#FF0000">*</font> 端口：</td>
+    <td><input type="text" name="port" id="port" size="5" class="htinputcss" style="width:60px;" value="{?$data.port?}" />&nbsp;(注：一般的邮箱：25,gmail或QQ:465)</td>
+  </tr>
+  <tr>
+    <td height="40" align="right"><font color="#FF0000">*</font>&nbsp;用户名：</td>
+    <td><input type="text" name="username" id="username" size="50" class="htinputcss" value="{?$data.username?}" />&nbsp;(示例：154417116808)</td>
+  </tr>
+  <tr>
+  <td height="40" align="right"><font color="#FF0000">*</font>&nbsp;密码：</td>
+  <td><input type="password" name="pwd" id="pwd" size="50" class="htinputcss" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right"><font color="#FF0000">*</font>&nbsp;身份验证：</td>
+    <td><input type="text" name="smtpuser" id="smtpuser" size="50" class="htinputcss" value="{?$data.smtpuser?}" />&nbsp;(示例：154417116808@qq.com)</td>
+  </tr>
+  <tr>
+    <td height="40" align="right">是否开启SSL(gmail或QQ必须开启)：</td>
+    <td><input name="ssl" type="checkbox" id="ssl" value="1" <if condition="$data.ssl eq '1'"> checked="checked" </if> /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right"><font color="#FF0000">*</font> 邮件标题：</td>
+    <td><input type="text" name="title" id="title" class="htinputcss" value="{?$data.title?}" /></td>
+  </tr>
+   <tr>
+    <td height="40" align="right"><font color="#FF0000">*</font>邮件内容：</td>
+    <td><textarea name="content" cols="45" rows="5">{?$data.content?}</textarea></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

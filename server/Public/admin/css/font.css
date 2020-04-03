@@ -1,0 +1,71 @@
+@charset "utf-8";
+.linkwhite a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+.linkwhite a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+.linkwhite a:hover {
+	text-decoration: none;
+	color: #333;
+}
+.linkwhite a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+.white{
+	color:#FFF;
+}
+.white26{
+	font-family:Arial;
+	color:#FFF;
+	font-size:26px;
+}
+.gray14{
+	font-size:14px;
+	color:#6c6b6b;
+}
+.gray{
+	font-size:12px;
+	color:#6c6b6b;
+}
+.linkgray a:link {
+	color: #6c6b6b;
+	text-decoration: none;
+}
+.linkgray a:visited {
+	text-decoration: none;
+	color: #6c6b6b;
+}
+.linkgray a:hover {
+	text-decoration: none;
+	color: #333;
+}
+.linkgray a:active {
+	text-decoration: none;
+	color: #6c6b6b;
+}
+.linkgreen a:link {
+	color: #019242;
+	text-decoration: none;
+}
+.linkgreen a:visited {
+	text-decoration: none;
+	color: #019242;
+}
+.linkgreen a:hover {
+	text-decoration: none;
+	color: #060;
+}
+.linkgreen a:active {
+	text-decoration: none;
+	color: #019242;
+}
+.orange{
+	color:#ff6c00;
+}
+.red{
+	color:#e61d1e;
+}

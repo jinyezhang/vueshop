@@ -1,0 +1,133 @@
+[ 2018-04-04T15:02:09+08:00 ] ::1 /api/home/index/slide?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0046s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: offset /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: length /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `app_columns` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `app_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `app_ad` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `app_ad` WHERE ( gid=1 ) ORDER BY num desc,id asc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+
+[ 2018-04-04T15:02:09+08:00 ] ::1 /api/home/index/recom?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0030s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: offset /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: length /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `app_columns` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `app_goods` [ RunTime:0.0030s ]
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/GoodsModel.class.php 第 54 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8192] Non-static method Think\MyModel::parse_name() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 47 行.
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/GoodsModel.class.php 第 58 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+
+[ 2018-04-04T15:02:09+08:00 ] ::1 /api/home/index/goodsLevel?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0045s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: offset /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: length /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `app_columns` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `app_goods` [ RunTime:0.0029s ]
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/GoodsModel.class.php 第 14 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8192] Non-static method Think\MyModel::parse_name() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 47 行.
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/GoodsModel.class.php 第 19 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/GoodsModel.class.php 第 22 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+

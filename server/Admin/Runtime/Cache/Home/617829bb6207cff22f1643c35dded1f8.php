@@ -1,0 +1,5 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($images)): $i = 0; $__LIST__ = $images;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="imgh"></div>
+<div>
+<input type="hidden" name="oldimgid[]" value="<?php echo ($vo[id]); ?>" >
+    <a href="/uploadfiles/<?php echo ($vo[photo]); ?>" target="_blank"><img src="/uploadfiles/<?php echo ($vo[photo]); ?>" width="100" height="80" border="0" /></a><br /><input id="oldimage<?php echo ($i); ?>" name="oldimage<?php echo ($i); ?>" class="inputleft htinputcss" value="<?php echo ($vo[photo]); ?>" type="text"><a class="files" href="javascript:void(0);"><input id="oldFileUpload<?php echo ($i); ?>" name="oldFileUpload<?php echo ($i); ?>" onchange="SingleUpload('oldimage<?php echo ($i); ?>','oldFileUpload<?php echo ($i); ?>','images','/hadmin.php/Home/GoodsList/upload')" type="file"></a><span class="uploading">正在上传，请稍候...</span>&nbsp;<input type="button" value="删除" class="delbtn2" onclick="delajximg('<?php echo ($gid); ?>','<?php echo ($vo[id]); ?>')" /> <font color="#FF0000">*</font>
+</div><?php endforeach; endif; else: echo "" ;endif; ?>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+<script type="text/javascript">
+function CheckAll(form)
+{
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled!=true)
+       e.checked = form.chkAll.checked;
+    }
+}
+var count=1;
+$(function(){
+	var ftype=$("#ftype");
+	var show=$("#show");
+	ftype.change(function(){
+		if(ftype.val()=='checkbox' || ftype.val()=='select'){
+			show.html("<input name='val[]' type='text' class='inputcss' />&nbsp;<font color='#FF0000'>*</font>&nbsp;<input name='btn' id='btn' type='button' onclick='clickbtn()' value='添加' />");
+		}else if(ftype.val()=='texts'){
+            show.html("文本不需要值");
+        }
+		$("#count").val(count);
+	});
+});
+
+//点击添加按钮
+function clickbtn(){
+	count++;
+	$("#show").append("<div class='btndiv'><input name='val[]' type='text' class='inputcss' />&nbsp;<font color='#FF0000'>*</font>&nbsp;<input name='dbtn'  type='button' onclick='delbtn(this)' value='删除' class='dbtn' /></div>");
+	$("#count").val(count);
+}
+
+//删除表单
+function delbtn(self){
+	$(self).parent(".btndiv").remove();
+	count--
+	$("#count").val(count);
+}
+
+function check(){
+	if (document.form1.attr.value.match(/^\s*$/)){
+		alert ("请输入属性");
+		document.form1.attr.focus();
+		return false;
+	}
+}
+
+</script>
+</head>
+
+<body>
+<include file="Public/attrmenu" />
+<div class="alterdiv"></div>
+<div class="positiontitle gray">您当前的位置：栏目管理 &gt;&gt; {?$cname?} &gt;&gt; <if condition="$type eq '0'">属性管理<else />规格管理</if></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="38%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv">添加<if condition="$type eq '0'">属性<else />规格</if></div>
+            <div id="formdiv">
+            <form name="form1" id="form1" method="post" action="__ACTION__?&id={?$id?}&action=add&type={?$type?}" onsubmit="return check()">
+            <input type="hidden" name="count" id="count" value="0" />
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+    <td width="33%" height="40" align="right"><font color="#FF0000">*</font> <if condition="$type eq '0'">属性<else />规格</if>名称：</td>
+    <td width="67%"><input type="text" name="attr" id="attr" class="inputcss" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">赋值类型：</td>
+    <td><select name="ftype" id="ftype">
+        <option value="select">列表</option>
+        <option value="checkbox">多选</option>
+        <option value="texts">批量文本</option>
+      </select></td>
+  </tr>
+    <tr>
+        <td height="40" align="right">值：</td>
+        <td>
+            <div id="show" class="gray">
+                <input name='val[]' type='text' class='inputcss' />&nbsp;<font color='#FF0000'>*</font>&nbsp;<input name='btn' id='btn' type='button' onclick='clickbtn()' value='添加' />
+            </div>
+        </td>
+    </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    <td width="62%" valign="top">
+        <div id="lnk_listdiv" style="margin-top:30px;">
+        <form name="form2" id="form2" method="post" action="__ACTION__?id={?$id?}&action=del&type={?$type?}">
+        	<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2" class="backfont">
+  <tr bgcolor="#f7f7f7">
+    <td width="10%" height="28" align="center"><input type="checkbox" onclick="CheckAll(this.form)" name="chkAll" value="checkbox" /></td>
+    <td width="48%" align="center"><if condition="$type eq '0'">属性<else />规格</if>名称</td>
+    <td width="23%" align="center">排序</td>
+    <td width="19%" align="center">管理</td>
+  </tr>
+<volist name="datalist" id="vo">
+  <tr bgcolor="#FFFFFF" onmouseover="this.style.backgroundColor='#f7f7f7'" onmouseout="this.style.background='#FFFFFF'">
+    <td height="52" align="center"><input type="checkbox" name="del[]" value="{?$vo[id]?}" <if condition="$vo[id] eq 913 || $vo[id] eq 928 || $vo[id] eq 932"> disabled="disabled" </if> /></td>
+    <td align="center">{?$vo[name]?}</td>
+    <td align="center"><input name="num[]" type="text" id="num[]" class="htinputcss" style="width:50px;" size="5" value="{?$vo[num]?}" />
+  <input name="numid[]" type="hidden" id="numid[]"  value="{?$vo[id]?}" /></td>
+    <td align="center"><a href="__CONTROLLER__/editattr?cid={?$id?}&id={?$vo[id]?}&type={?$type?}" class="edit">修改</a></td>
+  </tr>
+</volist>
+  <tr bgcolor="#FFFFFF">
+    <td height="52" colspan="4" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delbtn" id="delbtn" class="delbtn" value="删除" onclick="return confirm('确认要删除吗？')" />&nbsp;&nbsp;
+      <input type="button" name="button4" id="button4" class="orderbtn" value="修改排序" onClick="this.form.action='__ACTION__?id={?$id?}&action=order&type={?$type?}';this.form.submit()" onFocus="this.blur()" /></td>
+    </tr>
+</table>
+</form>
+        </div>
+        <div id="pagediv">
+        	{?$getpage?}
+        </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

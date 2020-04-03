@@ -1,0 +1,30 @@
+[ 2018-06-04T08:00:26+08:00 ] ::1 /api/home/index/nav?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0127s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0098s ]
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: offset /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: length /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `app_columns` [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `app_goods` [ RunTime:0.0121s ]
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/ColumnsModel.class.php 第 15 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8192] Non-static method Think\MyModel::parse_name() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 47 行.
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Application/Common/Model/ColumnsModel.class.php 第 19 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+NOTIC: [8] Undefined offset: 0 /Library/WebServer/Documents/vueshopserver/Common/function.php 第 10 行.
+NOTIC: [8] Undefined variable: rurlpath /Library/WebServer/Documents/vueshopserver/Common/function.php 第 13 行.
+

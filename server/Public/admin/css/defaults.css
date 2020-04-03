@@ -1,0 +1,61 @@
+@charset "utf-8";
+body{
+	margin:0 auto;
+	padding:0px;
+	font-size:12px;
+	font-family:"宋体";	
+}
+.ulnone{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	overflow:hidden;
+}
+.ulnone li{
+	list-style-type:none;
+}
+
+#header{width:100%;height:123px;background-image:url(../images/headerbg.jpg);background-position:center;position:relative;display:inline-block;z-index:3;}
+#header #logo{width: 729px;height: 38px;position: absolute;left: 3%;top: 20px;z-index: 1;font-size: 30px;color: #FFF;font-family:"微软雅黑";}
+#header #rdiv{width:296px;height:112px;position:absolute;z-index:1;top:10px;right:2%;text-align:right;}
+#header #rdiv .date{font-size:12px;color:#FFF;font-family:"微软雅黑";height:24px;margin-bottom:10px;}
+#header #rdiv .logintime{font-size:14px;color:#FFF;font-family:"微软雅黑";height:25px;margin-bottom:10px;}
+#header #rdiv .funimg{height:25px;margin-right:120px;}
+#header #menu{width:80%;height:50px;margin-top:78px;margin-left:3%;}
+#header #menu #leftmenu{width:104px;height:45px;float:left;position:relative;z-index:3;}
+#header #menu #leftmenu #downmenu{width:245px;height:auto;position:absolute;z-index:3;left:-10px;top:22px;display:none;}
+#header #menu #leftmenu #downmenu #downmenu1{width:100%;height:30px;background-image:url(../images/downmenu1.png);}
+#header #menu #leftmenu #downmenu #downmenu2{width:100%;background-image:url(../images/downmenu2.png);}
+#header #menu #leftmenu #downmenu #downmenu2 #showadmin{width:100%;height:50px;position:relative;z-index:3;}
+#header #menu #leftmenu #downmenu #downmenu2 #showadmin #adminimg{width: 29px;height: 30px;position: absolute;left: 33px;top: 10px;z-index: 3;}
+#header #menu #leftmenu #downmenu #downmenu2 #showadmin #name{width: 159px;height: 34px;position: absolute;z-index: 3;left: 68px;top: 8px;color:#FFF;font-family:"微软雅黑";}
+#header #menu #leftmenu #downmenu #downmenu2 #menucon{width:186px;background:#646464;margin:0 auto;margin-top:6px;}
+#header #menu #leftmenu #downmenu #downmenu2 #menucon li{height:40px;color:#FFF;font-family:"微软雅黑";font-size:14px;line-height:40px;margin-left:15px;cursor:pointer;}
+#header #menu #leftmenu #downmenu #downmenu2 #menucon li a{color:#FFF;font-family:"微软雅黑";font-size:14px;text-decoration:none;}
+#header #menu #leftmenu #downmenu #downmenu2 #menucon li a:link{text-decoration:none;}
+#header #menu #leftmenu #downmenu #downmenu3{width:100%;height:21px;background-image:url(../images/downmenu3.png);}
+#header #menu #cardmenu{float:left;width:80%;height:40px;position:relative;margin-top:8px;}
+#header #menu #cardmenu #left{width:12px;height:20px;position:absolute;z-index:3;top:10px;left:1%;display:none;}
+#header #menu #cardmenu #right{width:12px;height:20px;position:absolute;z-index:3;top:10px;right:1%;display:none;}
+#header #menu #card{width:93%;height:40px;overflow:hidden;position:relative;top:0px;left:27px;}
+#header #menu #card #cardborder{position:absolute;left:0px;top:0px;}
+#header #menu #card #cardborder div{width:97px;height:37px;background-image:url(../images/cardbg.png);position:relative;text-align:center;line-height:37px;color:#FFF;margin-right:5px;float:left;cursor:pointer;}
+#header #menu #card #cardborder div .close{width:9px;height:10px;z-index:2;position:absolute;right:0px;top:0px;}
+#header #menu #card #cardborder div.current{width:97px;height:37px;background-image:url(../images/cardbg.png);position:relative;text-align:center;line-height:37px;font-family:"微软雅黑";color:#FFF;font-weight:bolder;margin-right:5px;float:left;cursor:pointer;}
+
+#spacemenu{width:100%;height:32px;background-image:url(../images/spacemenu.jpg);clear:both;position:fixed;left:0px;top:0px;z-index:99;}
+
+#desktop{width:100%;display:inline-block;}
+#desktop #main{width:100%;margin:0 auto;margin-top:40px;height:100%;}
+#desktop #main .modules{width:120px;height:120px;margin-right:5%;margin-left:5%;margin-bottom:10px;float:left;position:relative;z-index:1;}
+#desktop #main .modules .imgdivs{width:77px;text-align:center;margin:0 auto;margin-bottom:10px;cursor:pointer;position:relative;z-index:1;}
+#desktop #main .modules .imgdivs .delico{width:20px;height:20px;position:absolute;z-index:2;top:0px;left:0px;display:none;}
+#desktop #main .modules .imgdivs .chgico{width:20px;height:20px;position:absolute;z-index:2;top:0px;right:0px;display:none;}
+#desktop #main .modules .text{width:80%;height:22px;text-align:center;background:#e4e4e4;margin:0 auto;line-height:22px;cursor:pointer;}
+#desktop #main .icosdiv{width: 422px;height: 244px;position: absolute;z-index:5;left: 70px;top: 1px;background-color: #FFFFFF;border: #CCC solid 1px;}
+#desktop #main .icosdiv .condiv{width:382px;height:205px;overflow:auto;margin-left:20px;margin-top:20px;}
+#desktop #main .icosdiv .condiv div{width:77px;height:77px;float:left;margin-right:6px;margin-left:6px;margin-bottom:10px;}
+#desktop #main .icosdiv .close{width:11px;height:11px;left:0px;top:0px;position:absolute;z-index:1;background-image:url(../images/m_close.png);}
+.desktop-icons{border-radius:5px;}
+
+#footer{clear:both;width:100%;height:25px;text-align:center;background:#646464;color:#FFF;line-height:25px;}

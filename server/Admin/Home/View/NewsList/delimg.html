@@ -1,0 +1,7 @@
+<volist name="imgs" id="vo">
+  <input type="hidden" name="oldid[]" id="oldid[]" value="{?$vo.id?}">
+  <div><input id="oldphoto{?$smarty.section.list.iteration?}" class="inputleft htinputcss" name="oldphoto{?$i?}" value="{?$vo.photo?}" type="text">
+<a class="files" href="javascript:void(0);"><input id="oldFileUpload{?$i?}" onchange="SingleUpload('oldphoto{?$i?}','oldFileUpload{?$i?}','images','__URL__/upload')" name="oldFileUpload{?$i?}" type="file"></a><span class="uploading">正在上传，请稍候...</span><input type="button" value="删除" class="oldbtn delbtn2" onclick="deloldimg('{?$vo.id?}','{?$id?}')" />&nbsp;<span class="redziti">*</span>
+  <div class="imgh"></div>
+  </div>
+  </volist>

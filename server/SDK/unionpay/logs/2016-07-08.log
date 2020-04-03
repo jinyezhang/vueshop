@@ -1,0 +1,141 @@
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[22]------ =====签名报文开始====== 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&merId=777290058110048&orderId=123456789&signMethod=01&txnAmt=112300&txnSubType=01&txnTime=20160708221409&txnType=01&version=5.0.0 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[31]------ 摘要sha1x16 >bb65eed4506adbbf0b601583c86675c7a424f48d 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[39]------ 签名串为 >2USQg3s6CwQ6h0XUq3E8+TO/FqIfnh1j2quWtw2+E2E7Grbdwb3HjyrO50rOVgZLhvKcKIIg6bBI2PQdLTGdERiblH6i7+Vs/639O7RelwLyH3cms1H6zV1jefaYuzG1pp64izeUMKxQv7eulmaY5j1WnSXM/UnTg8gIYtodAX2Pok0GUjWLinWaR5mm4db9QTQy6lHbG7A7YPUFsObp+omxOyFHX0wOAmQSHhP3THrWvEPyetPzbC5lAcP2yQzhe8CFQS4tE6dxRG4hrvfF52c/r51zl2a3y2lKyUZhHMyVLCVg+HvJlIVk1W/DxTutP9UJSsKJP7E7QuJNIl0gSg== 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[44]------ =====签名报文结束====== 
+2016-07-08 22:14:09, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="123456789" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20160708221409" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="112300" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="2USQg3s6CwQ6h0XUq3E8+TO/FqIfnh1j2quWtw2+E2E7Grbdwb3HjyrO50rOVgZLhvKcKIIg6bBI2PQdLTGdERiblH6i7+Vs/639O7RelwLyH3cms1H6zV1jefaYuzG1pp64izeUMKxQv7eulmaY5j1WnSXM/UnTg8gIYtodAX2Pok0GUjWLinWaR5mm4db9QTQy6lHbG7A7YPUFsObp+omxOyFHX0wOAmQSHhP3THrWvEPyetPzbC5lAcP2yQzhe8CFQS4tE6dxRG4hrvfF52c/r51zl2a3y2lKyUZhHMyVLCVg+HvJlIVk1W/DxTutP9UJSsKJP7E7QuJNIl0gSg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[22]------ =====签名报文开始====== 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&merId=777290058110048&orderId=123456789&signMethod=01&txnAmt=112300&txnSubType=01&txnTime=20160708221418&txnType=01&version=5.0.0 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[31]------ 摘要sha1x16 >3b6d7ba9008b108e642361fce9097f7ec2836a82 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[39]------ 签名串为 >pmyPGy7Z3OPJFn1QCVhZnT7k0ax/1mWha7FbEMPpy9yR6BNdjcncj2EbKVQoHkXzRAfmJqGB4elQ/IiX2kcbveI0i/8KDXTVppYOy9L4GN/lNkRYs2auKt14G1MF8HJEe/kj2sjnxFLPO44bYfe6ZfYm0PvqgYFgSP9wKD+OiHbdhQLH0KMRhHfM2uuegHdUPsBQEH+R6VkbRCKeeuToE4rkbm8qT96bsLQrnhAn42p3iI4/kH5S9lBhgXcA/ga5u3HraXa9jAfCqGxoyZqKGanS+NXuMuTd1pEV5cu8tXdjj0ZfTamS3KAFvA54+i4e+jEFJa+MO24PWXVzqP0Ftg== 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[44]------ =====签名报文结束====== 
+2016-07-08 22:14:18, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="123456789" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20160708221418" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="112300" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="pmyPGy7Z3OPJFn1QCVhZnT7k0ax/1mWha7FbEMPpy9yR6BNdjcncj2EbKVQoHkXzRAfmJqGB4elQ/IiX2kcbveI0i/8KDXTVppYOy9L4GN/lNkRYs2auKt14G1MF8HJEe/kj2sjnxFLPO44bYfe6ZfYm0PvqgYFgSP9wKD+OiHbdhQLH0KMRhHfM2uuegHdUPsBQEH+R6VkbRCKeeuToE4rkbm8qT96bsLQrnhAn42p3iI4/kH5S9lBhgXcA/ga5u3HraXa9jAfCqGxoyZqKGanS+NXuMuTd1pEV5cu8tXdjj0ZfTamS3KAFvA54+i4e+jEFJa+MO24PWXVzqP0Ftg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[22]------ =====签名报文开始====== 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&merId=777290058110048&orderId=0&signMethod=01&txnAmt=0&txnSubType=01&txnTime=20160708221553&txnType=01&version=5.0.0 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[31]------ 摘要sha1x16 >9e2aef508efd525935b17fe81546d3962ed0d7f4 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[39]------ 签名串为 >UjJkwS4YO5Wy4D/gTCe0jRQdgGqzUk7XEEDZ8hjyv1jsr5Wp9Q0kS4hVEn3L+AJw/Dva+qWLbfkr/3snrNkUNxa0DWCQPKiRS1r7otCHG/qOmxqPFuckjnnQejLbJhuOJJM1UPGoEFOcwzWMHC8e9SboZy2XLwNMwmd6IitE9ZM6NFJhUNzGfvj0stOc+2aXbm/wU/Oe35A2xldAll6aHYZRAAB3et0BTNQdJTKmKo4JPAoqLXXaZ5rg2rES+4kokSrI7F1GdOsgNOHccbq9oXFQqR8Q353B0imI+ic3HZmt8oPwEqEWvFaVO8negKrGE+ecVzeslLJMLKtR1UDrFw== 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[44]------ =====签名报文结束====== 
+2016-07-08 22:15:53, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="0" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20160708221553" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="0" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="UjJkwS4YO5Wy4D/gTCe0jRQdgGqzUk7XEEDZ8hjyv1jsr5Wp9Q0kS4hVEn3L+AJw/Dva+qWLbfkr/3snrNkUNxa0DWCQPKiRS1r7otCHG/qOmxqPFuckjnnQejLbJhuOJJM1UPGoEFOcwzWMHC8e9SboZy2XLwNMwmd6IitE9ZM6NFJhUNzGfvj0stOc+2aXbm/wU/Oe35A2xldAll6aHYZRAAB3et0BTNQdJTKmKo4JPAoqLXXaZ5rg2rES+4kokSrI7F1GdOsgNOHccbq9oXFQqR8Q353B0imI+ic3HZmt8oPwEqEWvFaVO8negKrGE+ecVzeslLJMLKtR1UDrFw==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[22]------ =====签名报文开始====== 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&merId=777290058110048&orderId=123456789&signMethod=01&txnAmt=1100&txnSubType=01&txnTime=20160708221647&txnType=01&version=5.0.0 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[31]------ 摘要sha1x16 >783d21a6efca8829243ba43205637c1fafee0020 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[39]------ 签名串为 >Pohc7UTSRrC+P8NBwz1ZUTijHn1GuXoU4qVxZs0cPb5k0lfLfTcR1O+tfKSbKpK6/Yltfgy59MYkvwmrXTeHqb9UzfY1vUwPX8SMrHYOdRI0NcAvnfyIs64Dce1XKX9COQwLSjwrItsqX0//XpX7JY3kCdqxQf/3wn0sO3JaRvLftgBkSLAGaIW2kzhUtdKN7yoYraEtjvJe4N6x7nsXE0R38OrVFztk2VrRzjeIvHOP7F8ZYqrViTQptu5eX6WT35PSJicimM5Cn9eCgyAPVGbnIcnGSJq3kCq8/ZMjqTNfVxnqumP7ExNVkIcr9tYcUE8F/NNoQ3KrGKrr9gAOtg== 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[44]------ =====签名报文结束====== 
+2016-07-08 22:16:47, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/acpService.class.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="123456789" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20160708221647" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1100" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="Pohc7UTSRrC+P8NBwz1ZUTijHn1GuXoU4qVxZs0cPb5k0lfLfTcR1O+tfKSbKpK6/Yltfgy59MYkvwmrXTeHqb9UzfY1vUwPX8SMrHYOdRI0NcAvnfyIs64Dce1XKX9COQwLSjwrItsqX0//XpX7JY3kCdqxQf/3wn0sO3JaRvLftgBkSLAGaIW2kzhUtdKN7yoYraEtjvJe4N6x7nsXE0R38OrVFztk2VrRzjeIvHOP7F8ZYqrViTQptu5eX6WT35PSJicimM5Cn9eCgyAPVGbnIcnGSJq3kCq8/ZMjqTNfVxnqumP7ExNVkIcr9tYcUE8F/NNoQ3KrGKrr9gAOtg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-07-08 23:32:13, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/secureUtil.php ], Line[13]------ =====签名报文开始====== 
+2016-07-08 23:32:13, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/secureUtil.php ], Line[19]------ 签名key=val&...串 >accessType=0&backUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://xxh.sino-web.cn/api/home/pay/unionpaycallback?token=386777c139fd9e2ac5&merId=777290058110048&orderId=123456&signMethod=01&txnAmt=1100&txnSubType=01&txnTime=20160708233213&txnType=01&version=5.0.0 
+2016-07-08 23:32:13, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/secureUtil.php ], Line[22]------ 摘要sha1x16 >2005bf71a237380e7c965837c540607b106714df 
+2016-07-08 23:32:13, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/secureUtil.php ], Line[32]------ >>>>>签名失败<<<<<<< 
+2016-07-08 23:32:13, INFO, ::1, File[ /Library/WebServer/Documents/xiaoxionghui/SDK/unionpay/sdk/secureUtil.php ], Line[34]------ =====签名报文结束====== 

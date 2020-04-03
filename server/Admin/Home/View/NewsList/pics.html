@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript" src="__ROOT__/ckeds/ckeditor.js"></script>
+<script type="text/javascript">
+function check()
+{
+	if (document.form1.title.value.match(/^\s*$/)){
+		alert ("标题名称不能为空");
+		document.form1.title.focus();
+		return false;
+	}
+}
+var count;
+$(function(){
+	var strhtml="";	
+	var num=2;
+	$("#btn").click(function(){
+		count=num++;
+		strhtml='<div><div class="imgh"></div><input id="photo'+(count)+'" class="inputleft htinputcss" name="photo'+(count)+'" value="" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload'+(count)+'" onchange="SingleUpload(\'photo'+(count)+'\',\'FileUpload'+(count)+'\',\'images\',\'__URL__/upload\')" name="FileUpload'+(count)+'" type="file"></a><span class="uploading">正在上传，请稍候...</span><input type="button" value="删除" class="delbtn2" onclick="delimg(this)" />&nbsp;<span class="redziti">*</span></div>';
+		$("#show").append(strhtml);
+		$("#imgnum").val(count);
+	});	
+});
+
+//删除图片
+function delimg(btn){
+	$("#imgnum").val(--count);
+	$(btn).parent().remove();
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__?id={?$id?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：栏目管理 &gt;&gt; {?$cname?} </td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="__ACTION__?id={?$id?}&action=add" onsubmit="return check()">
+<input name="imgnum" id="imgnum" type="hidden" value="1" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green">
+  <tr>
+    <td width="28%" height="40" align="right">标题：</td>
+    <td width="72%" colspan="2"><input type="text" name="title" id="title" class="htinputcss" />&nbsp;<font color="#FF0000">*</font></td>
+  </tr>
+  <tr>
+    <td height="49" align="right">日期：</td>
+    <td colspan="2"><input type="text" name="dates" id="dates" class="htinputcss" style="width:80px;" value="{?$date?}" /></td>
+  </tr>
+  <tr>
+    <td width="28%" height="40" align="right">型号：</td>
+    <td width="72%" colspan="2"><input type="text" name="model" id="model" class="htinputcss" />&nbsp;<font color="#FF0000">*</font></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">图片上传：</td>
+  <td width="30%"><div>
+  <input id="photo1" class="inputleft htinputcss" name="photo1" value="" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload1" onchange="SingleUpload('photo1','FileUpload1','images','__URL__/upload')" name="FileUpload1" type="file"></a><span class="uploading">正在上传，请稍候...</span>&nbsp;<font color="#FF0000">*</font>
+  </div>
+  <div id="show"></div>
+  </td>
+  <td valign="top"><input type="button" name="btn" id="btn" value="添加下一张" class="orderbtn" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">内容：</td>
+    <td colspan="2"><textarea name="bodys" id="bodys" class="ckeditor" cols="45" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td colspan="2"><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

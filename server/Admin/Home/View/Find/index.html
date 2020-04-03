@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function CheckAll(form)
+{
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled!=true)
+       e.checked = form.chkAll.checked;
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><include file="Public/findmenu" /></div>
+</div>
+<div class="alterdiv"></div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post"  action="__URL__/del">
+    <div id="navdiv">
+        <table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td width="27%" height="41" class="linkblue">&nbsp;&nbsp;&nbsp;您当前的位置：密码找回</td>
+    <td width="73%" class="linkblue">&nbsp;</td>
+    </tr>
+</table>
+    </div>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2" class="backfont">
+  <tr bgcolor="#f7f7f7">
+    <td height="28" align="center"><input type="checkbox" onclick="CheckAll(this.form)" name="chkAll" value="checkbox" /></td>
+    <td align="center">用户名</td>
+    <td align="center">会员邮箱</td>
+    <td align="center">提交时间</td>
+    <td align="center">管理</td>
+    </tr>
+<volist name="datalist" id="vo">
+  <tr bgcolor="#FFFFFF" onmouseover="this.style.backgroundColor='#f7f7f7'" onmouseout="this.style.background='#FFFFFF'">
+    <td height="52" align="center"><input type="checkbox" name="del[]" value="{?$vo.id?}" /></td>
+    <td align="center">{?$vo.username?}</td>
+    <td align="center">{?$vo.email?}</td>
+    <td align="center">{?$vo.times?}</td>
+    <td align="center"><a href="__URL__/desc?id={?$vo.id?}&page={?$page?}" class="editblue">查看</a></td>
+    </tr>
+</volist>
+  <tr bgcolor="#FFFFFF">
+    <td height="52" colspan="5" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delbtn" id="delbtn" class="delbtn" value="删除" onclick="return confirm('确认要删除吗？')" /></td>
+    </tr>
+</table>
+</form>
+</div>
+<div id="pagediv">
+    {?$getpage?}
+</div>
+</body>
+</html>

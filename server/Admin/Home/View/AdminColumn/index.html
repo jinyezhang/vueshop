@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__MODULE__/AdminManage/manage?page={?$page?}&kwords={?$kwords?}">返回上一级</a>&nbsp;&nbsp;<span class="gray">当前位置：栏目权限分配</span></div>
+</div>
+<div class="alterdiv"></div>
+<div id="desmenu">
+	<div id="movediv">
+    	<div id="fold"></div>
+        <div id="searchdiv">
+       
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="gray">
+  <tr>
+    <td align="center" class="linkblue">您正在为<a href="__MODULE__/AdminManage/manage?page={?$page?}&kwords={?$kwords?}">{?$an?}</a>用户分配权限</td>
+    </tr>
+</table>
+        </div>
+    </div>
+</div>
+<div id="topmenu">
+	<div id="movediv" class="gray">
+    	<div style="width:50%;height:45px;float:left;">栏目名称</div>
+        <div style="width:20%;height:45px;float:left;"></div>
+        <div style="width:20%;height:45px;float:left;"></div>
+        <div style="width:10%;height:45px;float:left;">权限选择</div>
+    </div>
+</div>
+<div id="colmain" class="backfont">
+<form id="form1" name="form1" method="post" action="__URL__/mod?an={?$an?}&userid={?$userid?}&page={?$page?}&kwords={?$kwords?}">
+<div id="showmenu">{?$jurimenu?}</div>
+<table width="100%" border="0" cellspacing="1" cellpadding="0">
+<tr>
+    <td width="82%" height="25" align="center" class="trbg">&nbsp;</td><td width="18%" align="center" class="trbg">全选 <input type="checkbox" onclick="CheckAll(this.form)" name="chkAll" value="checkbox" /></td>
+  </tr>
+  <tr>
+    <td height="25" colspan="2" align="center" class="trbg"><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;<input type="hidden" name="an" id="an" value="{?$an?}" /><input type="hidden" name="userid" id="userid" value="{?$userid?}" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</div>
+<script type="text/javascript">
+
+function CheckAll(form)
+{
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled!=true)
+       e.checked = form.chkAll.checked;
+    }
+}
+
+	
+	//鼠标滑过变色
+	var oColor=null;
+	function overColumn(my){
+		oColor=$(my).css("background-color");
+		$(my).css("background-color","#e5e4e4");
+		$(my).children(".movediv").children("div").children(".deskico").css("display","block");
+	}
+	function outColumn(my){
+		my.style.background=oColor;
+		$(my).css("background-color",oColor);
+		$(my).children(".movediv").children("div").children(".deskico").css('display',"none");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__?page={?$page?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：密码找回</td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2"  class="backfont">
+  <tr>
+    <td width="36%" height="40" align="right" bgcolor="#FFFFFF">用户名：</td>
+    <td width="64%" bgcolor="#FFFFFF" style="padding:5px;">{?$list.username?}</td>
+  </tr>
+  <tr>
+  <td height="40" align="right" bgcolor="#FFFFFF">密码：</td>
+  <td bgcolor="#FFFFFF" style="padding:5px;">{?$list.pwd?}</td>
+  </tr>
+  <tr>
+  <td height="40" align="right" bgcolor="#FFFFFF">请把密码发送到：</td>
+  <td height="40" align="left" bgcolor="#FFFFFF" class="linkblue"><a href="mailto:{?$list.email?}">{?$list.email?}</a></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

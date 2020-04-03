@@ -1,0 +1,8 @@
+服务端程序：在server文件夹下面thinkphp3.2+mysql5.1以上版本开发
+
+mysql数据库：server/data文件夹下面
+数据库配置：server/Common/config.php
+技术文档：server/Readme
+
+后台地址:域名/hadmin.php
+用户名和密码：admin

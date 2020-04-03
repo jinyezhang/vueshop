@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body {background: #F9FBF9;}
+#tabbar-div {background: #AE000A; padding-left: 10px; height: 21px; padding-top: 0px;}
+#tabbar-div p {margin: 0px; padding-top:1px;}
+.tab-front { background: #393939; line-height: 20px; color:#FFF;
+	padding: 4px 15px 4px 18px; border-right: 2px solid #1D1C29; cursor: hand;  cursor: pointer;}
+.tab-back,.tab-hover {color: #F4FAFB; line-height: 20px; padding: 4px 15px 4px 18px; cursor: hand; cursor: pointer;}
+.tab-hover {background: #2F9DB5;}
+#top-div {padding: 3px 0 2px; background: #27beff; margin: 5px; text-align: center;}
+#main-div {border: 1px solid #393939; padding: 5px; margin: 5px; background: #F9FBF9;}
+#menu-list {padding: 0; margin: 0;}
+#menu-list ul {padding: 0; margin: 0; list-style-type: none; margin-top:5px;}
+#menu-list li {padding-left: 16px; cursor: hand; cursor: pointer;}
+.explode {background: url(../images/menu_minus.gif) no-repeat 0px 3px; }
+.explode a{color:#000000;text-decoration:none;}
+.explode span{color:#000000;text-decoration:none;}
+.explode .menu{width:100%;line-height:10px;color:#000000;margin-bottom:5px;}
+.collapse {background: url(../images/menu_plus.gif) no-repeat 0px 3px; }
+.collapse a{color:#000000;text-decoration:none;}
+.collapse span{color:#000000;text-decoration:none;}
+.collapse .menu{width:100%;color:#000000;margin-bottom:5px;}
+.menu-item {background: url(../images/menu_arrow.gif) no-repeat 0px 3px; font-weight: normal;height:20px;}
+.explode a.blogfont{font-weight:bold;text-decoration:underline;}

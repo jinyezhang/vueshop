@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript">
+function check(){
+	if (document.form1.gid.value.match(/^\s*$/)){
+		alert ("请选择管理员分组");
+		document.form1.gid.focus();
+		return false;
+	}
+	if (document.form1.adminname.value.match(/^\s*$/)){
+		alert ("用户名不能为空");
+		document.form1.adminname.focus();
+		return false;
+	}
+	if (document.form1.password.value.match(/^\s*$/) || document.form1.password.value.length<5){
+		alert ("密码不能为空且不能小于5位");
+		document.form1.password.focus();
+		return false;
+	}
+	if (document.form1.qpwd.value.match(/^\s*$/)){
+		alert ("确认密码不能为空");
+		document.form1.qpwd.focus();
+		return false;
+	}
+	if(document.form1.password.value!=document.form1.qpwd.value){
+		alert("您输入的密码不一致");
+		document.form1.qpwd.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__/manage">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv" class="linkblue">修改管理员</div>
+            <div id="formdiv">
+            <form name="form1" id="form1" method="post" action="__URL__/mod?id={?$id?}" onsubmit="return check()">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+    <td width="33%" height="40" align="right">管理员分组：</td>
+    <td width="67%"><select name="gid" id="gid">
+      <option value="{?$data.gid?}" >{?$data.groupname?}</option>
+      <volist name="gdata" id="vo">
+        	<option value="{?$vo.id?}" >{?$vo.groupname?}</option>
+		</volist>
+      </select></td>
+  </tr>
+  <tr>
+      <td height="40" align="right">用户名：</td>
+      <td width="67%"><input type="text" name="adminname" id="adminname" class="htinputcss" value="{?$data.adminname?}" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">密码：</td>
+    <td><input type="password" name="password" id="password" class="htinputcss" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">确认密码：</td>
+    <td><input type="password" name="qpwd" id="qpwd" class="htinputcss" /></td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[ 2018-06-13T15:47:24+08:00 ] ::1 /api/home/user/login?token=386777c139fd9e2ac5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0145s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0103s ]
+
+[ 2018-06-13T15:47:31+08:00 ] ::1 /api/home/user/login?token=386777c139fd9e2ac5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0249s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0137s ]
+
+[ 2018-06-13T15:48:00+08:00 ] ::1 /api/home/user/login?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0209s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0335s ]
+NOTIC: [8] Undefined index: cellphone /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/UserController.class.php 第 13 行.
+NOTIC: [8] Undefined index: vcode /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/UserController.class.php 第 14 行.
+
+[ 2018-06-13T15:48:20+08:00 ] ::1 /api/home/user/login?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0114s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0088s ]
+NOTIC: [8] Undefined index: cellphone /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/UserController.class.php 第 13 行.
+NOTIC: [8] Undefined index: vcode /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/UserController.class.php 第 14 行.
+
+[ 2018-06-13T15:48:50+08:00 ] ::1 /api/home/user/login?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0173s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0178s ]
+NOTIC: [8] Undefined index: vcode /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/UserController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0171s ]
+SQL: SELECT `cellphone`,`qid` FROM `app_user` WHERE ( cellphone='19823716273' ) LIMIT 1   [ RunTime:0.0235s ]
+SQL: INSERT INTO `app_user` (`cellphone`,`times`,`qid`,`nickname`,`auth_token`,`at_expirytime`) VALUES ('19823716273','2018-06-13 15:48:50','379866092','会员_6690','e71d6f78240a700ca53d21aebd47f095','1528876130') [ RunTime:0.0095s ]
+SQL: SELECT * FROM `app_user` WHERE ( qid='379866092' ) LIMIT 1   [ RunTime:0.0216s ]
+
+[ 2018-06-13T15:49:48+08:00 ] ::1 /api/home/user/login?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0104s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0085s ]
+NOTIC: [8] Undefined index: vcode /Library/WebServer/Documents/vueshopserver/Application/Home/Controller/UserController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0103s ]
+SQL: SELECT `cellphone`,`qid` FROM `app_user` WHERE ( cellphone='19823716273' ) LIMIT 1   [ RunTime:0.0139s ]
+SQL: SELECT `cellphone`,`qid` FROM `app_user` WHERE ( cellphone='19823716273' ) LIMIT 1   [ RunTime:0.0105s ]
+SQL: SELECT * FROM `app_user` WHERE ( qid='379866092' ) LIMIT 1   [ RunTime:0.0433s ]
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function check(){
+	if (document.addform.title.value.match(/^\s*$/)){
+		alert ("请输入链接名称");
+		document.addform.title.focus();
+		return false;
+	}
+	if (document.addform.webs.value.match(/^\s*$/)){
+		alert ("请输入链接地址");
+		document.addform.webs.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv" class="linkblue">修改模板</div>
+            <div id="formdiv">
+            <form name="addform" id="addform" method="post" action="__URL__/mod?id={?$id?}" onsubmit="return check()">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+    <td width="33%" height="40" align="right">功能选择：</td>
+    <td width="67%">
+      <select name="fun" id="fun">
+          <option value="ma" <if condition="$tpl.fun eq 'ma'"> selected="selected" </if>>多篇</option>
+          <option value="sa" <if condition="$tpl.fun eq 'sa'"> selected="selected" </if>>单篇</option>
+          <option value="pro" <if condition="$tpl.fun eq 'pro'"> selected="selected" </if>>产品</option>
+          <option value="lnk" <if condition="$tpl.fun eq 'lnk'"> selected="selected" </if>>链接</option>
+          <option value="card" <if condition="$tpl.fun eq 'card'"> selected="selected" </if>>选项卡</option>
+          <option value="pics" <if condition="$tpl.fun eq 'pics'"> selected="selected" </if>>图库</option>
+          <option value="vo" <if condition="$tpl.fun eq 'vo'"> selected="selected" </if>>视频</option>
+          <option value="down" <if condition="$tpl.fun eq 'down'"> selected="selected" </if>>下载</option>
+        </select></td>
+  </tr>
+  <tr>
+    <td width="33%" height="40" align="right">模板名称：</td>
+    <td width="67%"><input type="text" name="title" id="title" class="htinputcss" value="{?$tpl.title?}" /></td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    
+  </tr>
+</table>
+</body>
+</html>

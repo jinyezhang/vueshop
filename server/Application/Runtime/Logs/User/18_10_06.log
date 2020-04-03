@@ -1,0 +1,89 @@
+[ 2018-10-06T18:36:35+08:00 ] ::1 /api/user/myinfo/uploadhead?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0064s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: UpFilePath /Library/WebServer/Documents/vueshopserver/Application/User/Controller/MyinfoController.class.php 第 97 行.
+NOTIC: [8] Undefined index: filename /Library/WebServer/Documents/vueshopserver/Application/User/Controller/MyinfoController.class.php 第 98 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 40 行.
+NOTIC: [8] Undefined index: extension /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 41 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 43 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 50 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 74 行.
+NOTIC: [2] getimagesize(./userfiles/head/533397667.): failed to open stream: No such file or directory /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 116 行.
+NOTIC: [2] Division by zero /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 165 行.
+NOTIC: [2] imagecreatetruecolor() expects parameter 1 to be integer, float given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 196 行.
+NOTIC: [2] imagecolortransparent() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 197 行.
+NOTIC: [2] imagecolorstotal() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 198 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, null given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 210 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 211 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 185 行.
+
+[ 2018-10-06T18:38:34+08:00 ] ::1 /api/user/myinfo/apiuploadhead?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000248s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0014s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: UpFilePath /Library/WebServer/Documents/vueshopserver/Application/User/Controller/MyinfoController.class.php 第 112 行.
+NOTIC: [8] Undefined index: filename /Library/WebServer/Documents/vueshopserver/Application/User/Controller/MyinfoController.class.php 第 113 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 40 行.
+NOTIC: [8] Undefined index: extension /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 41 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 43 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 50 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 74 行.
+NOTIC: [2] getimagesize(./userfiles/head/175547204.): failed to open stream: No such file or directory /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 116 行.
+NOTIC: [2] Division by zero /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 165 行.
+NOTIC: [2] imagecreatetruecolor() expects parameter 1 to be integer, float given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 196 行.
+NOTIC: [2] imagecolortransparent() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 197 行.
+NOTIC: [2] imagecolorstotal() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 198 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, null given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 210 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 211 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 185 行.
+
+[ 2018-10-06T18:39:24+08:00 ] ::1 /api/user/myinfo/formdatahead?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0013s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: UpFilePath /Library/WebServer/Documents/vueshopserver/Application/User/Controller/MyinfoController.class.php 第 112 行.
+NOTIC: [8] Undefined index: filename /Library/WebServer/Documents/vueshopserver/Application/User/Controller/MyinfoController.class.php 第 113 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 40 行.
+NOTIC: [8] Undefined index: extension /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 41 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 43 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 50 行.
+NOTIC: [8] Undefined index:  /Library/WebServer/Documents/vueshopserver/Application/Common/Org/UploadFile.class.php 第 74 行.
+NOTIC: [2] getimagesize(./userfiles/head/538171924.): failed to open stream: No such file or directory /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 116 行.
+NOTIC: [2] Division by zero /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 165 行.
+NOTIC: [2] imagecreatetruecolor() expects parameter 1 to be integer, float given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 196 行.
+NOTIC: [2] imagecolortransparent() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 197 行.
+NOTIC: [2] imagecolorstotal() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 198 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, null given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 210 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, boolean given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 211 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /Library/WebServer/Documents/vueshopserver/Application/Common/Org/Images.class.php 第 185 行.
+
+[ 2018-10-06T18:42:09+08:00 ] ::1 /api/user/myinfo/formdatahead?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0014s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0001s ]
+

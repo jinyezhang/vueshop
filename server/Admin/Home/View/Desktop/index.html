@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/admin/css/defaults.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/desktop.js"></script>
+<script type="text/javascript">
+$(function(){
+idrag("__URL__/desktoporder","__PUBLIC__");
+});
+</script>
+</head>
+
+<body style="background:url(__PUBLIC__/admin/images/desktopbg.jpg);">
+<div id="spacemenu"></div>
+<div style="height:32px;width:100%"></div>
+<div id="desktop">
+	<div id="main">
+    <volist name="arr" id="vo">
+    	<div class="modules" val="{?$vo.id?}">
+        	<div class="imgdivs" data-title="{?$vo.title?}" data-url="<if condition="$vo.cid neq ''">__MODULE__/ColumnManage#{?$vo.cid?}<else />__MODULE__/{?$vo.webs?}</if>"  onclick="
+            <if condition="$vo.cid neq ''">
+            	addNav('{?$vo.title?}','__MODULE__/ColumnManage#{?$vo.cid?}','__PUBLIC__')
+            <else />
+            	addNav('{?$vo.title?}','__MODULE__/{?$vo.webs?}','__PUBLIC__')
+            </if>
+            "><img src="__PUBLIC__/admin/ico/{?$vo.pic_path?}" width="77" height="77" border="0" />
+            	<div class="delico">
+                <if condition="$vo.fid eq ''">
+                	<img onclick="delShort('{?$vo.id?}',event,'__URL__','__URL__/delShort')" src="__PUBLIC__/admin/images/delico.png" title="删除快捷方式" />
+                </if>
+                </div>
+                <div class="chgico" onclick="chgico(this,event,{?$vo.id?},'__PUBLIC__','__URL__/modpic')"><img src="__PUBLIC__/admin/images/changeico.png" title="更换图标" /></div>
+            </div>
+            <div class="text" onclick="editText(this,{?$vo.id?},event,'__URL__/edittext')" title="{?$vo.title?}">{?$vo.title?}</div>
+        </div>
+    </volist>
+    </div>
+</div>
+</body>
+</html>

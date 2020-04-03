@@ -1,0 +1,160 @@
+[ 2018-06-04T08:00:40+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0161s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0115s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:00:55+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000286s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0097s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0283s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:01:07+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000265s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0122s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0103s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:02:31+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0126s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0224s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:02:32+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0354s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0323s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:02:48+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0251s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0133s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:03:57+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0332s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0119s ]
+NOTIC: [8] Undefined index: uid /Library/WebServer/Documents/vueshopserver/Application/User/Controller/ShareController.class.php 第 11 行.
+
+[ 2018-06-04T08:09:58+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000242s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0112s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0164s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0237s ]
+SQL: UPDATE `app_user` SET `points`=points+10 WHERE ( qid='696443691' ) [ RunTime:0.0184s ]
+
+[ 2018-06-04T08:10:42+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0137s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0155s ]
+SQL: UPDATE `app_user` SET `points`=points+10 WHERE ( qid='696443691' ) [ RunTime:0.0111s ]
+
+[ 2018-06-04T08:11:02+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0145s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0139s ]
+SQL: UPDATE `app_user` SET `points`=points+10 WHERE ( qid='696443691' ) [ RunTime:0.0275s ]
+
+[ 2018-06-04T08:12:10+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0102s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0126s ]
+SQL: UPDATE `app_user` SET `points`=points+10 WHERE ( qid='6964436913' ) [ RunTime:0.0140s ]
+
+[ 2018-06-04T08:12:21+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0105s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0175s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0120s ]
+SQL: UPDATE `app_user` SET `points`=points+10 WHERE ( qid='696443691' ) [ RunTime:0.0195s ]
+
+[ 2018-06-04T08:14:58+08:00 ] ::1 /api/user/share/addpoints?token=1ec949a15fb709370f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_token` [ RunTime:0.0312s ]
+SQL: SELECT `token` FROM `app_token` LIMIT 1   [ RunTime:0.0086s ]
+

@@ -1,0 +1,403 @@
+[ 2018-04-07T07:51:18+08:00 ] ::1 /hadmin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/IndexController.class.php 第 8 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2018-04-07T07:51:18+08:00 ] ::1 /hadmin.php/Home/Index/chkcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined variable: ascii_number /Library/WebServer/Documents/vueshopserver/Admin/Common/Org/ValidationCodeOrg.class.php 第 41 行.
+NOTIC: [8] Uninitialized string offset: 4 /Library/WebServer/Documents/vueshopserver/Admin/Common/Org/ValidationCodeOrg.class.php 第 56 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000245s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000263s ]
+
+[ 2018-04-07T07:51:24+08:00 ] ::1 /hadmin.php/Home/Index/index/action/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0031s ]
+SQL: select a.qid,a.adminname,a.shell,a.gid,a.logintime,a.password,g.groupname from app_admin as a,app_admin_group as g where a.gid=g.id and a.adminname='admin' and a.password='21232f297a57a5a743894a0e4a801fc3' [ RunTime:0.0016s ]
+SQL: UPDATE `app_admin` SET `logintime`='2018-04-07 07:51:24' WHERE ( id=36 ) [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `app_log` [ RunTime:0.0041s ]
+SQL: INSERT INTO `app_log` (`content`,`state`,`admin`,`times`) VALUES ('登陆成功','登陆','admin','2018-04-07 07:51:24') [ RunTime:0.0010s ]
+
+[ 2018-04-07T07:51:24+08:00 ] ::1 /hadmin.php/Home/Default/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: kwords /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 9 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+NOTIC: [8] Undefined index: HTTP_X_FORWARDED_FOR /Library/WebServer/Documents/vueshopserver/Admin/Home/Org/OtherOrg.class.php 第 7 行.
+NOTIC: [8] Undefined index: HTTP_CLIENT_IP /Library/WebServer/Documents/vueshopserver/Admin/Home/Org/OtherOrg.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `app_funset` [ RunTime:0.0041s ]
+SQL: SELECT `title`,`webs` FROM `app_funset` WHERE ( id in (1,2,5) and isclose='1' ) ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2018-04-07T07:51:24+08:00 ] ::1 /hadmin.php/Home/Desktop/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: kwords /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 9 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: select d.id,d.num,d.title,d.cid,d.fid,d.pic_path,f.webs from app_desktop as d left join app_funset as f on d.fid=f.id where d.uid=36 and (f.isclose='1' or d.cid<>'') and f.isshow=1 order by d.num asc,d.id desc [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000039s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000248s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000262s ]
+
+[ 2018-04-07T07:51:28+08:00 ] ::1 /hadmin.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: kwords /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 9 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014454s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2018-04-07T07:51:28+08:00 ] ::1 /hadmin.php/Home/User/left
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: kwords /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 9 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2018-04-07T07:51:28+08:00 ] ::1 /hadmin.php/Home/User/manage?utype=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: kwords /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 9 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: screen /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: strname /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 29 行.
+NOTIC: [8] Undefined index: timeorder /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0014s ]
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Admin/Home/Model/UserModel.class.php 第 46 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8192] Non-static method Think\MyModel::parse_name() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 47 行.
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Admin/Home/Model/UserModel.class.php 第 71 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000039s ]
+NOTIC: [8] Undefined variable: timeorder /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 47 行.
+NOTIC: [8] Undefined variable: timeorder /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 47 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015633s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2018-04-07T07:51:39+08:00 ] ::1 /hadmin.php/Home/User/manage?utype=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: strname /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 19 行.
+NOTIC: [8] Undefined index: timeorder /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0012s ]
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Admin/Home/Model/UserModel.class.php 第 46 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+NOTIC: [8192] Non-static method Think\MyModel::parse_name() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 47 行.
+NOTIC: [8192] Non-static method Think\MyModel::parseSql() should not be called statically /Library/WebServer/Documents/vueshopserver/Admin/Home/Model/UserModel.class.php 第 71 行.
+NOTIC: [8192] Non-static method Think\MyModel::getTableName() should not be called statically /Library/WebServer/Documents/vueshopserver/ThinkPHP/Library/Think/MyModel.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000032s ]
+NOTIC: [8] Undefined variable: timeorder /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 47 行.
+NOTIC: [8] Undefined variable: timeorder /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 47 行.
+NOTIC: [8] Use of undefined constant cellphone - assumed 'cellphone' /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/0ffcf880e3b2f8acc029a8ec7d72ca5b.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2018-04-07T07:51:40+08:00 ] ::1 /hadmin.php/Home/User/edit?id=696443691&page=1&kwords=13717628483&screen=3&utype=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: strname /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `app_user` WHERE ( qid='696443691' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000054s ]
+NOTIC: [8] Undefined index: city /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/afb591fdea954fe1c35977289fa28c58.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2018-04-07T18:24:37+08:00 ] ::1 /hadmin.php/Home/User/edit?id=696443691&page=1&kwords=13717628483&screen=3&utype=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: strname /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `app_user` WHERE ( qid='696443691' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8] Undefined index: city /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/afb591fdea954fe1c35977289fa28c58.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2018-04-07T20:58:45+08:00 ] ::1 /hadmin.php/Home/User/edit?id=696443691&page=1&kwords=13717628483&screen=3&utype=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `app_admin` WHERE ( qid=36 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: strname /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/UserController.class.php 第 60 行.
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `app_user` WHERE ( qid='696443691' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8] Undefined index: city /Library/WebServer/Documents/vueshopserver/Admin/Runtime/Cache/Home/afb591fdea954fe1c35977289fa28c58.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009186s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-04-07T20:58:46+08:00 ] ::1 /hadmin.php/Home/Desktop/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Library/WebServer/Documents/vueshopserver/ThinkPHP/Common/functions.php 第 1264 行.
+NOTIC: [8] Undefined index: kwords /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 9 行.
+NOTIC: [8] Undefined index: action /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 15 行.
+NOTIC: [8] Undefined index: id /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 18 行.
+NOTIC: [8] Undefined index: pid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 21 行.
+NOTIC: [8] Undefined index: cid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 24 行.
+NOTIC: [8] Undefined index: parentid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 27 行.
+NOTIC: [8] Undefined index: page /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 30 行.
+NOTIC: [8] Undefined index: pg /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 33 行.
+NOTIC: [8] Undefined index: cardid /Library/WebServer/Documents/vueshopserver/Admin/Home/Controller/PublicController.class.php 第 36 行.
+SQL: select d.id,d.num,d.title,d.cid,d.fid,d.pic_path,f.webs from app_desktop as d left join app_funset as f on d.fid=f.id where d.uid=36 and (f.isclose='1' or d.cid<>'') and f.isshow=1 order by d.num asc,d.id desc [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000055s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+

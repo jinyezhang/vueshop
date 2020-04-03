@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+<script type="text/javascript">
+function check()
+{
+	if (document.form1.fun.value.match(/^\s*$/)){
+		alert ("请选择功能");
+		document.form1.fun.focus();
+		return false;
+	}
+	if (document.form1.c_names.value.match(/^\s*$/)){
+		alert ("栏目名称不能为空");
+		document.form1.c_names.focus();
+		return false;
+	}
+}
+$(function(){
+	var tpl=document.getElementById("tpl");
+	var str="";
+	$.ajax({
+			url:"__URL__/showtpl",
+			type:"post",
+			dataType:"json",
+			data:{"fun":$("#fun").val()},
+			success: function(data){
+				if(data[0].id>0){
+					$("#showtpl").css("display","block");
+					for(var i=0;i<data.length;i++){
+						tpl.options.add(new Option(data[i].title,data[i].title));
+					}
+				}else{
+					$("#showtpl").css("display","none");
+				}
+			}
+		});
+	$("#fun").change(function(){
+		$.ajax({
+			url:"__URL__/showtpl",
+			type:"post",
+			dataType:"json",
+			data:{"fun":$(this).val()},
+			success: function(data){
+				if(data[0].id>0){
+					$("#showtpl").css("display","block");
+					$("#tpl").children("option").remove();
+					str="";
+					for(var i=0;i<data.length;i++){
+						str+="<option value='"+data[i].title+"'>"+data[i].title+"</option>";
+					}
+					$("#tpl").append(str);
+				}else{
+					$("#showtpl").css("display","none");
+				}
+			}
+		});	
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="spacemenu"></div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:3%">
+  <tr>
+  <td width="15%" align="left"></td>
+  <td width="85%" align="left"><div id="col_title">栏目添加</div></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><div id="col_main">
+    <form id="form1" name="form1" method="post" action="__URL__/add" onSubmit="return check()">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="blue">
+  <tr>
+    <td width="31%" height="40" align="right">功能选择：</td>
+    <td width="69%" align="left" class="gray"><select name="fun" id="fun">
+    	<option value="">请选择</option>
+          <!--<option value="ma">多篇</option>-->
+          <!--<option value="sa">单篇</option>-->
+          <option value="pro">产品</option>
+          <!--<option value="lnk">链接</option>-->
+          <!--<option value="card">选项卡</option>-->
+          <!--<option value="pics">图库</option>-->
+          <!--<option value="vo">视频</option>-->
+          <!--<option value="down">下载</option>
+          <option value="inte">积分</option>-->
+        </select></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left">
+    	<div id="showtpl" style="display:none;"><table width='100%' border='0' cellspacing='0' cellpadding='0'>
+	<tr>
+	<td width='31%' height='40' align='right'>模板选择：</td>
+	<td>
+    	<select name='tpl' id='tpl'>
+        </select>
+    </td>
+    </tr>
+    </table></div>
+    </td>
+   </tr>
+  <tr>
+    <td height="40" align="right">栏目名称：</td>
+    <td align="left"><input type="text" name="c_names" id="c_names" class="htinputcss" />
+        </td>
+  </tr>
+  <tr>
+    <td height="40" align="center">&nbsp;</td><td height="40" align="left"><input type="submit" name="button" id="button" class="addbtnblue" value="提交" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+    </tr>
+</table>
+</form>
+</div></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

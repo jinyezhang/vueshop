@@ -1,0 +1,7 @@
+<volist name="images" id="vo">
+<div class="imgh"></div>
+<div>
+<input type="hidden" name="oldimgid[]" value="{?$vo[id]?}" >
+    <a href="__ROOT__/uploadfiles/{?$vo[photo]?}" target="_blank"><img src="__ROOT__/uploadfiles/{?$vo[photo]?}" width="100" height="80" border="0" /></a><br /><input id="oldimage{?$i?}" name="oldimage{?$i?}" class="inputleft htinputcss" value="{?$vo[photo]?}" type="text"><a class="files" href="javascript:void(0);"><input id="oldFileUpload{?$i?}" name="oldFileUpload{?$i?}" onchange="SingleUpload('oldimage{?$i?}','oldFileUpload{?$i?}','images','__URL__/upload')" type="file"></a><span class="uploading">正在上传，请稍候...</span>&nbsp;<input type="button" value="删除" class="delbtn2" onclick="delajximg('{?$gid?}','{?$vo[id]?}')" /> <font color="#FF0000">*</font>
+</div>
+</volist>

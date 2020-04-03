@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+  RewriteCond %{http_host} ^demo.com [NC]
+  RewriteRule ^(.*)$ http://www.demo.com/$1 [R=301.L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^index/(.*)$ index.php/$1 [QSA,PT,L]
+  RewriteRule ^api$ api.php/$1
+  RewriteRule ^api\/(.*)$ api.php/$1
+  RewriteRule ^wap\/(.*)$ wap.php/$1
+
+    ErrorDocument 404 /index.html
+</IfModule>

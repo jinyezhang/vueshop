@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript">
+function check(){
+	if (document.form1.gid.value.match(/^\s*$/)){
+		alert ("请选择图片组");
+		document.form1.gid.focus();
+		return false;
+	}
+	if (document.form1.title.value.match(/^\s*$/)){
+		alert ("请输入标题");
+		document.form1.title.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__/manage">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv" class="linkblue">修改图片</div>
+            <div id="formdiv">
+            <form name="form1" id="form1" method="post" action="__URL__/mod?id={?$id?}" onsubmit="return check()">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+    <td width="33%" height="40" align="right">图片组：</td>
+    <td width="67%"><select name="gid" id="gid">
+      <option value="{?$data.gid?}" >{?$data.gtitle?}</option>
+      <volist name="gdata" id="vo">
+        	<option value="{?$vo.id?}" >{?$vo.title?}</option>
+		</volist>
+      </select></td>
+  </tr>
+  <tr>
+      <td height="40" align="right">标题：</td>
+      <td width="67%"><input type="text" name="title" id="title" class="htinputcss" value="{?$data.title?}" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">链接地址：</td>
+    <td><input type="text" name="webs" id="webs" class="htinputcss" value="{?$data.webs?}" /></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">图片上传：</td>
+  <td><input id="photo" class="inputleft htinputcss" name="photo" value="{?$data.photo?}" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload" onchange="SingleUpload('photo','FileUpload','images','__URL__/upload')" name="FileUpload" type="file"></a><span class="uploading">正在上传，请稍候...</span></td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    
+  </tr>
+</table>
+</body>
+</html>

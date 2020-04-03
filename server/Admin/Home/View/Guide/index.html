@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>城市管理</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript">
+function CheckAll(form)
+{
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled!=true)
+       e.checked = form.chkAll.checked;
+    }
+}
+function check(){
+	if (document.form1.image.value.match(/^\s*$/)){
+		alert ("请上传图片");
+		document.form1.image.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu"></div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="38%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv">添加引导页</div>
+            <div id="formdiv">
+            <form name="form1" id="form1" method="post" action="__URL__/add" onsubmit="return check()">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+  <td width="33%" height="40" align="right">图片上传：</td>
+  <td width="67%"><input name="image" id="image" class="inputleft htinputcss" value="" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload" onchange="SingleUpload('image','FileUpload','images','__URL__/upload')" name="FileUpload" type="file"></a><span class="uploading">正在上传，请稍候...</span></td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    <td width="62%" valign="top">
+    	<div id="ldiv_search"></div>
+        <div id="lnk_listdiv">
+        <form name="form2" id="form2" method="post" action="__URL__/del">
+        	<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2" class="backfont">
+  <tr bgcolor="#f7f7f7">
+    <td width="10%" height="28" align="center"><input type="checkbox" onclick="CheckAll(this.form)" name="chkAll" value="checkbox" /></td>
+    <td align="center">图片预览</td>
+    <td width="10%" align="center">排序</td>
+    <td width="11%" align="center">管理</td>
+  </tr>
+<volist name="datalist" id="vo">
+  <tr bgcolor="#FFFFFF" onmouseover="this.style.backgroundColor='#f7f7f7'" onmouseout="this.style.background='#FFFFFF'">
+    <td height="52" align="center"><input type="checkbox" name="del[]" value="{?$vo.id?}" /></td>
+    <td align="center">
+    <if condition="$vo['image'] neq ''">
+    	<a href="__ROOT__/uploadfiles/{?$vo['image']?}" target="_blank"><img src="__ROOT__/uploadfiles/{?$vo['image']?}" width="100" height="80" border="0" /></a>
+    <else />
+    	没有图片
+    </if>
+    </td>
+    <td align="center"><input name="num[]" type="text" id="num[]" class="htinputcss" style="width:50px;" size="5" value="{?$vo.num?}" />
+  <input name="numid[]" type="hidden" id="numid[]"  value="{?$vo.id?}" /></td>
+    <td align="center"><a href="__URL__/edit?id={?$vo.id?}&page={?$page?}" class="edit">修改</a></td>
+  </tr>
+</volist>
+  <tr bgcolor="#FFFFFF">
+    <td height="52" colspan="4" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delbtn" id="delbtn" class="delbtn" value="删除" onclick="return confirm('确认要删除吗？')" />&nbsp;&nbsp;
+      <input type="button" name="button4" id="button4" class="orderbtn" value="修改排序" onClick="this.form.action='__URL__/order';this.form.submit()" onFocus="this.blur()" /></td>
+    </tr>
+</table>
+</form>
+        </div>
+        <div id="pagediv">
+        	{?$getpage?}
+        </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

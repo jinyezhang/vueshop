@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function check()
+{
+	if (document.form1.willsoi.value.match(/^\s*$/)){
+		alert ("请输入要转向的地址");
+		document.form1.willsoi.focus();
+		return false;
+	}
+	if (document.form1.lastsoi.value.match(/^\s*$/)){
+		alert ("请输入转向之后的地址：");
+		document.form1.lastsoi.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu"></div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：301地址转向设置</td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="__URL__/add" onsubmit="return check()">
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2"  class="backfont">
+  <tr>
+    <td width="36%" height="40" align="right" bgcolor="#FFFFFF">要转向的地址：</td>
+    <td width="64%" align="left" bgcolor="#FFFFFF"><input type="text" name="willsoi" id="willsoi" class="htinputcss" value="{?$turnAddress?}" /> (如：sino-web.net)</td>
+    </tr>
+  <tr>
+  <td height="40" align="right" bgcolor="#FFFFFF" class="linkblue">转向之后的地址：</td>
+  <td height="40" align="left" bgcolor="#FFFFFF" class="linkblue"><input type="text" name="lastsoi" id="lastsoi" class="htinputcss" value="{?$turnedAddress?}" /> (如：www.sino-web.net)</td>
+  </tr>
+  <tr>
+  <td height="40" colspan="2" align="center" bgcolor="#FFFFFF"><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;<input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

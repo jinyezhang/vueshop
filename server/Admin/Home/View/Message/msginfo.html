@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function check(){
+	if (document.form1.content.value.match(/^\s*$/)){
+		alert ("请输入回复的内容");
+		document.form1.content.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__?page={?$page?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：查看留言详情</td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#e2e2e2"  class="backfont">
+	<tr>
+    <td width="36%" height="40" align="right" bgcolor="#FFFFFF">活动名称：</td>
+    <td width="64%" bgcolor="#FFFFFF">{?$msgdata['actname']?}</td>
+  </tr>
+  <tr>
+    <td width="36%" height="40" align="right" bgcolor="#FFFFFF"><span class="blue">{?$msgdata['times']?}&nbsp;&nbsp;&nbsp;{?$msgdata['username']?}({?$msgdata['name']?})：</span></td>
+    <td width="64%" bgcolor="#FFFFFF">{?$msgdata['content']?}</td>
+  </tr>
+  <volist name="rmsgdata" id="vo">
+  <tr>
+    <td width="36%" height="40" align="right" bgcolor="#FFFFFF"><span class="green">{?$vo['times']?}&nbsp;&nbsp;&nbsp;{?$vo['adminname']?}：</span></td>
+    <td width="64%" bgcolor="#FFFFFF">回复：{?$vo['content']?}</td>
+  </tr>
+  </volist>
+</table>
+<br>
+<hr>
+<br>
+<form id="form1" name="form1" method="post" action="__ACTION__?action=reply&id={?$id?}&page={?$page?}"  onsubmit="return check()" >
+  <table width="70%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#e2e2e2"  class="backfont">
+    <tr>
+      <td height="40" bgcolor="#FFFFFF">回复内容：<font color="#FF0000" >*</font></td>
+    </tr>
+    <tr>
+<td align="center" bgcolor="#FFFFFF"><textarea name="content" id="content" cols="40" rows="15" style="width:100%"></textarea></td>
+  </tr>
+    <tr><td height="40" align="center" bgcolor="#FFFFFF"><input type="submit" name="button" id="button" value="提交" />&nbsp;&nbsp;<input type="reset" name="button2" id="button2" value="重置" /></td>
+    </tr>
+  </table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@charset "utf-8";
+body {
+	font-family: "宋体";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+div{
+	overflow:hidden;
+}
+h1,h2,p{
+	margin:0px;
+	padding:0px;
+}
+.ulnone{
+	margin: 0px;
+	padding: 0px;
+	overflow:hidden;
+	list-style-type:none;
+}
+.ulnone li{
+	overflow:hidden;
+	list-style-type:none;
+}
+.background{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:-1;
+	left:0px;
+	top:0px;
+}
+.main{
+	width:75%;
+	margin:0 auto;
+	clear:both;
+	position:relative;
+	z-index:2;
+}
+.in_top{
+	width:75%;
+	height:62px;
+	margin:0 auto;
+}
+#logo{
+	max-width:232px;
+	max-height:53px;
+	float:left;
+}
+.logofont{
+	font-size:30px;
+	font-family:"微软雅黑";
+	color:#FFF;
+	margin-top:10px;
+}
+.header{
+	width:100%;
+	background-image:url(../images/top_bg.png);
+}
+#in_menu{
+	width: auto;
+	text-align: right;
+	float:right;
+	word-break:keep-all;
+	white-space:nowrap;
+	margin-top:24px;
+	
+}
+.logindiv{
+	width:493px;
+	margin:0 auto;
+	margin-top:10%;
+}
+.ldivtop{
+	width:100%;
+	height:71px;
+	background-image:url(../images/login.png);
+	position:relative;
+}
+.ldivcen{
+	width:100%;
+	height:225px;
+	background-image:url(../images/login-02.png);
+	position:relative;
+}
+.ldivf{
+	width:100%;
+	height:70px;
+	background-image:url(../images/login-03.png);
+	position:relative;
+}
+.in_footer{
+	width:100%;
+	height:48px;
+	background-image:url(../images/top_bg.png);
+	clear:both;
+	position:fixed;
+	bottom:0px;
+}
+.in_foot{
+	width:75%;
+	margin:0 auto;
+}
+.ldivtopfont{
+	width: 288px;
+	height: 35px;
+	position: absolute;
+	left: 120px;
+	top: 16px;
+	z-index: 1;
+}
+
+.ldivcen2{
+	width: 370px;
+	height: 221px;
+	position: absolute;
+	left: 69px;
+	top: 0px;
+	z-index: 1;
+}
+.in_inputdiv{
+	width:350px;
+	height:46px;
+	background:url(../images/logininput.png);
+	border:0px;
+	border:none;
+	background-repeat:no-repeat;
+	
+}
+.in_input{
+	width:98%;
+	height:25px;
+	border:0px none;
+}
+#vdcode{
+	width:127px;
+	height:20px;
+}
+.in_line{
+	width:100%;
+	border:#CCC 1px dashed;
+	margin-top:20px;
+	height:0px;
+}
+.ldivf2{
+	width: 370px;
+	height: 55px;
+	position: absolute;
+	left: 69px;
+	top: 0px;
+	z-index: 1;
+}
+.in_footfont{
+	margin-top:18px;
+	text-align:center;
+}

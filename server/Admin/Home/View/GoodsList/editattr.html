@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+<script type="text/javascript">
+	var count=1;
+$(function(){
+	var ftype=$("#ftype");
+	var show=$("#show");
+	ftype.change(function(){
+//		if(ftype.val()=='checkbox' || ftype.val()=='select'){
+//			show.html("<input name='val[]' type='text' class='inputcss' />&nbsp;<font color='#FF0000'>*</font>&nbsp;<input name='btn' id='btn' type='button' onclick='clickbtn()' value='添加' />");
+//		}
+		$("#count").val(count);
+	});
+});
+
+//点击添加按钮
+function clickbtn(){
+	count++;
+	$("#show").append("<div class='btndiv'><input name='val[]' type='text' class='inputcss' />&nbsp;<font color='#FF0000'>*</font>&nbsp;<input name='dbtn'  type='button' onclick='delbtn(this)' value='删除' class='dbtn' /></div>");
+	$("#count").val(count);
+}
+
+//删除表单
+function delbtn(self){
+	$(self).parent(".btndiv").remove();
+	count--
+	$("#count").val(count);
+}
+
+function check(){
+	if (document.form1.attr.value.match(/^\s*$/)){
+		alert ("请输入属性");
+		document.form1.attr.focus();
+		return false;
+	}
+}
+
+//ajax删除值
+function ajxdelval(did,pid){
+	$.get("__CONTROLLER__/ajaxdelpara",{id:did,cid:pid,rand:Math.random()},function(data){
+		$("#oldshow").html(data);
+	});
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1" class="gray"><a href="__CONTROLLER__/attr?id={?$cid?}&type={?$type?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv" class="linkblue">修改<if condition="$type eq '0'">属性<else />规格</if></div>
+            <div id="formdiv">
+            <form name="form1" id="form1" method="post" action="__ACTION__?cid={?$cid?}&id={?$id?}&action=mod" onsubmit="return check()">
+            <input type="hidden" name="count" id="count" value="0" />
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+    <td width="33%" height="40" align="right"><if condition="$type eq '0'">属性<else />规格</if>名称：</td>
+    <td width="67%"><input type="text" name="attr" id="attr" class="inputcss" value="{?$getattr.name?}" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">赋值类型：</td>
+    <td>
+        <if condition="$getattr.ftype eq 'texts'">
+            批量文本
+            <else />
+        <select name="ftype" id="ftype">
+        <option value="select" <if condition="$getattr[ftype] eq 'selected'"> selected="selected" </if> >列表</option>
+        <option value="checkbox" <if condition="$getattr[ftype] eq 'checkbox'"> selected="selected" </if> >多选</option>
+      </select>&nbsp;<input name='btn' id='btn' type='button' onclick='clickbtn()' value='添加值' /></if></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">值：</td>
+  <td><div id="oldshow">
+      <if condition="$getattr[ftype] eq 'texts'">
+          文本不需要值
+          <else />
+            <volist name="getVal" id="vo">
+            <input type="hidden" name="oid[]" value="{?$vo[id]?}">
+            <div class='btndiv'><input name="oldval[]" type="text" class="inputcss" value="{?$vo[name]?}" />&nbsp;<font color="#FF0000">*</font><if condition="$vo[ftype] neq 'text'">&nbsp;<input name='odelbtn' type="button" value="删除" onclick="ajxdelval('{?$vo.id?}','{?$id?}')" /></if></div>
+            </volist>
+      </if>
+        </div>
+        <div id="show"></div></td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    
+  </tr>
+</table>
+</body>
+</html>

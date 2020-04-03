@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function CheckAll(form)
+{
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.Name != "chkAll"&&e.disabled!=true)
+       e.checked = form.chkAll.checked;
+    }
+}
+function check(){
+	if (document.addform.title.value.match(/^\s*$/)){
+		alert ("请输入图片分组名称");
+		document.addform.title.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv">修改图片分组</div>
+            <div id="formdiv">
+            <form name="addform" id="addform" method="post" action="__URL__/mod?id={?$id?}" onsubmit="return check()">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:20px;">
+  <tr>
+    <td width="33%" height="40" align="right">分组名称：</td>
+    <td width="67%"><input type="text" name="title" id="title" class="htinputcss" value="{?$getgroup.title?}" /></td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

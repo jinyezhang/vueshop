@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="spacemenu"></div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：添加会员</td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="__ACTION__?action=add" onsubmit="return check()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green">
+	<tr>
+        <td height="40" align="right">头像上传：</td>
+        <td><input id="head" class="inputleft htinputcss" name="head" value="" type="text"><a class="files" href="javascript:void(0);"><input id="headUpload" onchange="SingleUpload('head','headUpload','head','__URL__/upload')" name="headUpload" type="file"></a><span class="uploading">正在上传，请稍候...</span></td>
+        </tr>
+  <tr>
+    <td width="28%" height="40" align="right"><span class="redziti">*</span> 手机号：</td>
+    <td width="72%"><input type="text" name="cellphone" id="cellphone" class="htinputcss" /></td>
+  </tr>
+  <tr>
+    <td width="28%" height="40" align="right"><span class="redziti">*</span> 密码：</td>
+    <td width="72%"><input type="text" name="password" id="password" class="htinputcss" /></td>
+  </tr>
+  <tr>
+    <td width="28%" height="40" align="right">昵称：</td>
+    <td width="72%"><input type="text" name="nickname" id="nickname" class="htinputcss" /></td>
+  </tr>
+    <tr>
+        <td width="28%" height="40" align="right">性别：</td>
+        <td width="72%">男<input type="radio" name="gender" value="1" />&nbsp;&nbsp;女<input type="radio" name="gender" value="2" /></td>
+    </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/calender/WdatePicker.js"></script>
+<script type="text/javascript">
+function check()
+{
+    if (document.form1.cellphone.value.match(/^\s*$/)){
+        alert ("请输入手机号码");
+        document.form1.cellphone.focus();
+        return false;
+    }
+    if (!document.form1.cellphone.value.match(/^1[3|4|5|8][0-9]\d{4,8}$/)){
+        alert ("请输入正确的手机号码");
+        document.form1.cellphone.focus();
+        return false;
+    }
+	if (document.form1.password.value.match(/^\s*$/)){
+		alert ("请输入密码");
+		document.form1.password.focus();
+		return false;
+	}
+
+}
+$(function(){
+//	$.ajax({
+//		type:"get",
+//		url:"__PUBLIC__/admin/js/cityList.json",
+//		async : false,
+//		success:function(data){
+//			//alert(JSON.stringify(data.citys));
+//			var citydata=data.citys;
+//			var city=document.getElementById("city");
+//			for(var i=0;i<citydata.length;i++){
+//				city.options.add(new Option(citydata[i].city,citydata[i].city));
+//			}
+//		}
+//	});
+});
+</script>
+</html>

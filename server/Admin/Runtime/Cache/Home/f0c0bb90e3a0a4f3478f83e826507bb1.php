@@ -1,0 +1,76 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/Public/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function check(){
+	if (document.form1.website.value.match(/^\s*$/)){
+		alert ("请输入站点名称");
+		document.form1.website.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu"></div>
+<div class="alterdiv"></div>
+<form name="form1" id="form1" method="post" action="/hadmin.php/Home/SiteInfo/add" onsubmit="return check()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:20px;">
+  <tr>
+    <td width="37%" height="40" align="right">站点名称：</td>
+    <td width="63%"><input type="text" name="website" id="website" class="htinputcss" value="<?php echo ($getSet["website"]); ?>" /> <font color="#FF0000">*</font></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">上传文件大小限制：</td>
+    <td><input type="text" name="filesize" id="filesize" class="htinputcss" value="<?php echo ($getSet["filesize"]); ?>" style="width:60px;" />
+      <span class="gray">KB (1MB=1024Kb)(注：对服务器限制大小无效)</span></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">Android版本号：</td>
+    <td><input type="text" name="andr_ver" id="andr_ver" class="htinputcss" value="<?php echo ($getSet["andr_ver"]); ?>" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">IOS版本号：</td>
+    <td><input type="text" name="ios_ver" id="ios_ver" class="htinputcss" value="<?php echo ($getSet["ios_ver"]); ?>" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">android下载地址：</td>
+    <td><input type="text" name="and_url" id="and_url" class="htinputcss" value="<?php echo ($getSet["and_url"]); ?>" style="width:250px;" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">IOS下载地址：</td>
+    <td><input type="text" name="ios_url" id="ios_url" class="htinputcss" value="<?php echo ($getSet["ios_url"]); ?>" style="width:250px;" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">是否开启Android强制升级：</td>
+    <td><input name="isandlevel" type="checkbox" id="isandlevel" value="1" <?php if($getSet['isandlevel'] == '1'): ?>checked="checked"<?php endif; ?> />
+      </td>
+  </tr>
+  <tr>
+    <td height="20" align="right">是否开启IOS紧急措施：<div style="text-align:left;line-height:1.8em;width:100%;">(注：如果app有重大更新导致旧版本出现数据错误请开启此功能，开启后旧版本app暂时不能使用，待新版本苹果审核通过后，再关闭此功能)</div></td>
+    <td valign="middle"><input name="isioslevel" type="checkbox" onclick="iosLevelMsg()" id="isioslevel" value="1" <?php if($getSet['isioslevel'] == '1'): ?>checked="checked"<?php endif; ?> /></td>
+  </tr>
+  <tr >
+    <td colspan="2" align="left">
+    <div id="showmsg" style="display:<?php if($getSet['isioslevel'] == '1'): ?>block<?php else: ?>none<?php endif; ?>"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="37%" align="right">IOS紧急措施提示消息：</td>
+<td><textarea name="ioslevelmsg" id="ioslevelmsg" cols="45" rows="5"><?php if($getSet['ioslevelmsg'] != ''): echo ($getSet['ioslevelmsg']); else: ?>app正在升级审核中，给您带来不便深感抱歉，请在7天后再次使用！<?php endif; ?></textarea></td>
+</tr>
+</table>
+      </div>
+      </td>
+    </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/calender/WdatePicker.js"></script>
+<script type="text/javascript">
+function check(){
+	if (document.form1.title.value.match(/^\s*$/)){
+		alert ("请输入优惠券名称");
+		document.form1.title.focus();
+		return false;
+	}
+	if (document.form1.startdate.value.match(/^\s*$/)){
+		alert ("请输入起始日期");
+		document.form1.startdate.focus();
+		return false;
+	}
+	if (document.form1.enddate.value.match(/^\s*$/)){
+		alert ("请输入结束日期");
+		document.form1.enddate.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__/manage?page={?$page?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="38%" align="center" valign="top">
+    	<div id="leftdiv">
+        	<div id="titlediv">修改优惠券</div>
+            <div id="formdiv">
+            <form name="form1" id="form1" method="post" action="__URL__/mod?id={?$id?}" onsubmit="return check()">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green" style="margin-top:40px;">
+  <tr>
+    <td width="33%" height="40" align="right">优惠券名称：</td>
+    <td width="67%"><input type="text" name="title" id="title" class="htinputcss" value="{?$data['title']?}" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">金额：</td>
+    <td><input type="text" name="price" id="price" class="htinputcss" value="{?$data['price']?}" style="width:50px;" /> 元</td>
+  </tr>
+  <tr>
+    <td height="40" align="right">起始日期：</td>
+    <td><input type="text" name="startdate" id="startdate" class="htinputcss" style="width:80px;" onClick="WdatePicker()" value="{?$data['startdate']?}" /> </td>
+  </tr>
+  <tr>
+    <td height="40" align="right">结束日期：</td>
+    <td><input type="text" name="enddate" id="enddate" class="htinputcss" style="width:80px;" onClick="WdatePicker()" value="{?$data['enddate']?}" /> </td>
+  </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="修改" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+            </div>
+        </div>
+    </td>
+    
+  </tr>
+</table>
+</body>
+</html>

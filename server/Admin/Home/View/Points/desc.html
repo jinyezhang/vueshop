@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__?page={?$page?}&kwords={?$kwords?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：兑换详细信息</td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="__URL__/handle?id={?$id?}&page={?$page?}&kwords={?$kwords?}" onSubmit="return confirm('确定要执行选定的操作吗？');">
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#e2e2e2" class="backfont">
+    <tr>
+      <td width="323" height="25" align="right" bgcolor="#FFFFFF">编&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
+      <td width="721" bgcolor="#FFFFFF">&nbsp;{?$list.id?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">礼品名称：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.title?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">数量：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.amount?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">兑换用户：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.username?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">申请时间：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.times?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">处理时间：</td>
+      <td bgcolor="#FFFFFF">&nbsp;
+      <if condition="$list.decide eq '1'">
+      	{?$list.times2?}
+      <else />
+      	<font color=#ff0000>未处理</font>
+      </if>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">状&nbsp;&nbsp;&nbsp;&nbsp;态：</td>
+      <td bgcolor="#FFFFFF">&nbsp;
+      <if condition="$list.decide eq '1'">
+      	<font color=#0000ff>已处理</font>
+      <else />
+      	<font color=#ff0000>未处理</font>
+      </if>
+      </td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">称&nbsp;&nbsp;&nbsp;&nbsp;呼：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.sex?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.names?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">联系电话：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.phone?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">通讯地址：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.address?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">邮政编码： </td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.zipcode?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">消费积分：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.nowpoint?}分</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">总消费积分：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.zpoint?}分</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">用户当前积分：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.pointstrue?}分</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">备&nbsp;&nbsp;&nbsp;&nbsp;注：</td>
+      <td bgcolor="#FFFFFF">&nbsp;{?$list.content?}</td>
+    </tr>
+    <tr>
+      <td height="25" align="right" bgcolor="#FFFFFF">&nbsp;</td>
+      <td bgcolor="#FFFFFF"><label>
+        <input type="submit" name="button" id="button" value="确认处理" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+</div>
+</body>
+</html>

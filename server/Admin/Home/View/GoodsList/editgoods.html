@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript" src="__ROOT__/ckeds/ckeditor.js"></script>
+<script type="text/javascript">
+var count=1;
+function check(pUrl)
+{
+    var specAttrid=document.getElementsByName("spec_attrid[]");
+    var specAttrName=document.getElementsByName("spec_attrname[]");
+    if (document.form1.title.value.match(/^\s*$/)){
+        alert ("标题名称不能为空");
+        document.form1.title.focus();
+        return false;
+    }
+
+    for(var i=0;i<specAttrid.length;i++){
+        var specNull=true;
+        var specVal=document.getElementsByName("spec_val_"+specAttrid[i].value+"[]");
+        for(var j=0;j<specVal.length;j++){
+            if(!specVal[j].value.match(/^\s*$/)){
+                specNull=false;
+                break;
+            }
+        }
+        if(specNull){
+            alert("请输入"+specAttrName[i].value+"！");
+            specVal[0].focus();
+            break;
+        }
+    }
+    if(specNull==false) {
+        document.getElementById("button").disabled = true;
+        document.form1.action = pUrl;
+        document.form1.submit();
+    }
+
+}
+$(function(){
+    //显示产品图片
+    $.ajax({
+        url:"__URL__/ajxgoodsimgs",
+        type:"get",
+        data:{"gid":"{?$id?}"},
+        success: function(data){
+            $("#showimg").html(data);
+        }
+    });
+
+    var strhtml="";
+    $("#btn").click(function(){
+        count++;
+        strhtml='<div><div class="imgh"></div><input id="photo'+(count)+'" class="inputleft htinputcss" name="photo'+(count)+'" value="" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload'+(count)+'" onchange="SingleUpload(\'photo'+(count)+'\',\'FileUpload'+(count)+'\',\'images\',\'__URL__/upload\')" name="FileUpload'+(count)+'" type="file"></a><span class="uploading">正在上传，请稍候...</span><input type="button" value="删除" class="delbtn2" onclick="delimg(this)" /></div>';
+        $("#show").append(strhtml);
+        $("#imgnum").val(count);
+    });
+
+
+    //产品规格
+    var specMain=$("#spec-main");
+    specMain.on("click",".spec-checkbox",function(){
+        var counts=$(this).parent().parent().find(".spec-list").length;
+        var attrid=$(this).attr("data-id");
+        if($(this).attr("checked")=='checked'){
+            var html=appendStr(attrid);
+            $(this).parent().parent().append(html);
+        }else{
+            if(counts>1) {
+                $(this).parent().remove();
+            }
+        }
+    });
+
+    specMain.on("keyup",".spec-input",function(){
+        var nextCount=$(this).parent().next().length;
+        var attrid=$(this).attr("data-id");
+        if(nextCount==0 && $(this).val()!=''){
+            $(this).prev().attr("checked","checked");
+            var html=appendStr(attrid);
+            $(this).parent().parent().append(html);
+        }
+    });
+
+});
+
+function appendStr(name){
+    var str='<div class="spec-list"><input type="checkbox" class="spec-checkbox" value="1" /><input type="text" name="spec_val_'+name+'[]" class="spec-input" value="" placeholder="请输入值" /></div>';
+    return str;
+}
+
+//删除图片
+function delimg(btn){
+    $("#imgnum").val(--count);
+    var nextEle=$(btn).parent().nextAll().find(".inputleft");
+    if(nextEle.attr("id")!=undefined){
+        $(btn).parent().nextAll().each(function(){
+            var index=$(this).index()+1;
+            $(this).find(".inputleft").attr({"id":"photo"+index,"name":"photo"+index});
+            $(this).find("input[type='file']").attr({"id":"FileUpload"+index,"name":"FileUpload"+index});
+            $(this).find("input[type='file']").attr("onchange",'SingleUpload(\'photo'+(index)+'\',\'FileUpload'+(index)+'\',\'images\',\'__URL__/upload\')');
+        });
+    }
+    $(btn).parent().remove();
+}
+//ajax删除图片
+function delajximg(pGid,pId){
+    $.ajax({
+        url:"__URL__/ajxgoodsimgs",
+        type:"get",
+        data:{"gid":pGid,"id":pId,"action":"del"},
+        success:function(data){
+            $("#showimg").html(data);
+        }
+    });
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__/manage?id={?$cid?}&page={?$page?}&kwords={?$kwords?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46" class="linkblue">您当前的位置：<a href="__MODULE__/ColumnManage#{?$cid?}">栏目管理</a> &gt;&gt; {?$cname?} </td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="">
+<input name="imgnum" id="imgnum" type="hidden" value="1" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green">
+  <tr>
+    <td width="28%" height="40" align="right">所属栏目：</td>
+    <td width="72%">{?$modselpcls?}</td>
+  </tr>
+  <tr>
+  	<td height="40" align="right"><font color="#FF0000">*</font> 标题：</td>
+    <td width="72%"><input type="text" name="title" id="title" class="htinputcss" value="{?$data.title?}" /></td>
+  </tr>
+    <tr>
+        <td height="40" align="right">价格：</td>
+        <td><input type="text" name="price" id="price" class="htinputcss" style="width:50px;" value="{?$data['price']?}" /> 元</td>
+    </tr>
+    <tr>
+        <td height="40" align="right">运费：</td>
+        <td><input type="text" name="freight" id="freight" class="htinputcss" style="width:50px;" value="{?$data['freight']?}" /> 元</td>
+    </tr>
+    <volist name="oneattr" id="vo">
+        <input type="hidden" name="attrid[]" value="{?$vo[id]?}">
+        <if condition="$vo[ftype] eq 'select'">
+            <tr>
+                <td height="40" align="right"><input name="sattrid[]" type="hidden" value="{?$vo[id]?}"><input type="hidden" name="sftype[]" value="{?$vo[ftype]?}">{?$vo[name]?}：</td>
+                <td>
+                    <select name="sval[]">
+                        <option value="">请选择</option>
+                        <volist name="vo[sub]" id="sub">
+                            <option value="{?$sub[id]?}" <if condition="$sub[id] eq $sub[value]"> selected="selected" </if> >{?$sub[name]?}</option>
+                        </volist>
+                    </select></td>
+            </tr>
+            <elseif condition="$vo[ftype] eq 'checkbox'" />
+            <tr>
+                <td height="40" align="right"><input name="cattrid[]" type="hidden" value="{?$vo[id]?}"><input type="hidden" name="cftype[]" value="{?$vo[ftype]?}">{?$vo[name]?}：</td>
+                <td>
+                    <volist name="vo[sub]" id="sub">
+                        <label><input type="checkbox" name="cval{?$vo[id]?}[]" value="{?$sub[id]?}" <if condition="$sub[id] eq $sub[value]"> checked="checked" </if> />{?$sub[name]?}</label>&nbsp;&nbsp;&nbsp;
+                    </volist>
+                </td>
+            </tr>
+        </if>
+    </volist>
+    <if condition="$specTotal gt 0">
+    <tr>
+        <td height="40" align="right"><font color="#FF0000">*</font> 产品规格：</td>
+        <td>
+            <div id="spec-main" class="spec-main">
+                <volist name="specData" id="vo">
+                    <input type="hidden" name="spec_attrid[]" value="{?$vo['id']?}" />
+                    <input type="hidden" name="spec_attrname[]" value="{?$vo['name']?}" />
+                    <div class="spec-row">
+                        <div class="spec-title">{?$vo['name']?}</div>
+                        <div class="spec-content">
+                            <volist name="vo['sub']" id="sub">
+                            <div class="spec-list">
+                                <input type="checkbox" data-id="{?$vo['id']?}" class="spec-checkbox" value="1" checked />
+                                <input type="text" name="spec_val_{?$vo['id']?}[]" class="spec-input" value="{?$sub['value']?}" placeholder="请输入值" data-id="{?$vo['id']?}" />
+                            </div>
+                            </volist>
+                            <div class="spec-list">
+                                <input type="checkbox" data-id="{?$vo['id']?}" class="spec-checkbox" value="1" />
+                                <input type="text" name="spec_val_{?$vo['id']?}[]" class="spec-input" value="" placeholder="请输入值" data-id="{?$vo['id']?}" />
+                            </div>
+                        </div>
+                    </div>
+                </volist>
+            </div>
+        </td>
+    </tr>
+        </if>
+    <tr>
+        <td height="40" align="right"><font color="#FF0000">*</font> 图片上传：</td>
+        <td width="30%">
+            <div id="showimg"></div>
+            <div class="imgh"></div>
+            <div>
+            <input id="photo1" class="inputleft htinputcss" name="photo1" value="" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload1" onchange="SingleUpload('photo1','FileUpload1','images','__URL__/upload')" name="FileUpload1" type="file"></a><span class="uploading">正在上传，请稍候...</span>
+        </div>
+            <div id="show"></div>
+            <div style="clear:both;width:100%;"><input type="button" name="btn" id="btn" value="添加下一张" class="orderbtn" /></div>
+        </td>
+    </tr>
+  <tr>
+    <td height="40" align="right">内容：</td>
+    <td colspan="2"><textarea name="bodys" id="bodys" class="ckeditor" cols="45" rows="5">{?$bodys?}</textarea></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td><input type="button" name="button" id="button" value="修改" class="addbtn" onclick="check('__ACTION__?id={?$id?}&cid={?$cid?}&action=mod&page={?$page?}')" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<volist name="getVal" id="vo">
+<input type="hidden" name="oid[]" value="{?$vo[id]?}">
+<div class='btndiv'><input name="oldval[]" type="text" class="inputcss" value="{?$vo[name]?}" />&nbsp;<font color="#FF0000">*</font><if condition="$vo[ftype] neq 'text'">&nbsp;<input name='odelbtn' type="button" value="删除" onclick="ajxdelval('{?$vo.id?}','{?$vo[pid]?}')" /></if>
+<br /><br />
+</div>
+</volist>

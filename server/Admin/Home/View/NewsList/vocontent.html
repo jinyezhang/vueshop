@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript" src="__ROOT__/ckeds/ckeditor.js"></script>
+<script type="text/javascript">
+function check()
+{
+	if (document.form1.title.value.match(/^\s*$/)){
+		alert ("标题名称不能为空");
+		document.form1.title.focus();
+		return false;
+	}
+}
+$(function(){
+	$("#wtype").change(function(){
+		if($(this).val()=="app"){
+			$("#app").show();
+			$("#web").hide();	
+		}else if($(this).val()=='web'){
+			$("#app").hide();
+			$("#web").show();
+		}else{
+			$("#app").hide();
+			$("#web").hide();
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__?id={?$id?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：栏目管理 >> {?$cname?} </td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="__ACTION__?id={?$id?}&action=add" onsubmit="return check()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green">
+  <tr>
+    <td width="28%" height="40" align="right">标题：</td>
+    <td width="72%"><input type="text" name="title" id="title" class="htinputcss" />&nbsp;<font color="#FF0000">*</font></td>
+  </tr>
+  <tr>
+    <td height="49" align="right">日期：</td>
+    <td><input type="text" name="dates" id="dates" class="htinputcss" style="width:80px;" value="{?$date?}" /></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">视频封面：</td>
+  <td><input id="cover" class="inputleft htinputcss" name="cover" value="" type="text"><a class="files" href="javascript:void(0);"><input id="coverFile" onchange="SingleUpload('cover','coverFile','images','__URL__/upload')" name="coverFile" type="file"></a><span class="uploading">正在上传，请稍候...</span></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">视频形式：</td>
+  <td>
+    <select name="wtype" id="wtype">
+    	<option value="">请选择</option>
+    	<option value="web">web</option>
+        <option value="app">app</option>
+    </select></td>
+  </tr>
+  <tr>
+  <td height="0" colspan="2" align="left">
+  <table id="app" width="100%" border="0" cellpadding="0" cellspacing="0" style="display:none;">
+      <tr>
+      <td width="28%" height="40" align="right">视频类型：</td>
+      <td width="72%">
+        <select name="vtype" id="vtype">
+            <option value="">请选择</option>
+            <option value="mp4">mp4</option>
+            <option value="m3u8">m3u8</option>
+        </select> (本地视频选择mp4格式，在线直播选择m3u8格式)</td>
+      </tr>
+      <tr>
+      <td height="40" align="right">上传视频/在线直播：</td>
+      <td><input id="video" class="inputleft htinputcss" name="video" value="" type="text">(支持mp4格式视频文件，在线直播输入m3u8格式的播放地址)</td>
+      </tr>
+  </table>
+  
+  <table id="web" width="100%" border="0" cellpadding="0" cellspacing="0" style="display:none;">
+      <tr>
+      <td width="28%" height="40" align="right">视频地址：</td>
+      <td width="72%">
+        <input id="webvideo" class="inputleft htinputcss" name="webvideo" value="" type="text">
+      </tr>
+  </table>
+  
+  </td>
+  </tr>
+  <tr>
+    <td height="40" align="right">内容：</td>
+    <td><textarea name="bodys" id="bodys" class="ckeditor" cols="45" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

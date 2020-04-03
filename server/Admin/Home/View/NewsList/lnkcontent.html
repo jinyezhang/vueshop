@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.form.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/formfiles.js" ></script>
+<script type="text/javascript">
+function check()
+{
+	if (document.form1.title.value.match(/^\s*$/)){
+		alert ("标题名称不能为空");
+		document.form1.title.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="spacemenu">
+	<div id="leftarrow"></div>
+    <div id="return1"><a href="__URL__?id={?$id?}">返回上一级</a></div>
+</div>
+<div class="alterdiv"></div>
+<div id="posdiv">
+	<table width="94%" border="0" cellspacing="0" cellpadding="0" class="gray" align="center">
+  <tr>
+    <td height="46">您当前的位置：栏目管理 &gt;&gt; {?$cname?} </td>
+  </tr>
+</table>
+</div>
+<div id="maindiv">
+<form id="form1" name="form1" method="post" action="__ACTION__?action=add&id={?$id?}" onsubmit="return check()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="green">
+  <tr>
+    <td width="36%" height="40" align="right">标题：</td>
+    <td width="64%"><input type="text" name="title" id="title" class="htinputcss" />&nbsp;<font color="#FF0000">*</font></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">图片上传：</td>
+  <td><input id="photo" class="inputleft htinputcss" name="photo" value="" type="text"><a class="files" href="javascript:void(0);"><input id="FileUpload" onchange="SingleUpload('photo','FileUpload','images','__URL__/upload')" name="FileUpload" type="file"></a><span class="uploading">正在上传，请稍候...</span></td>
+  </tr>
+  <tr>
+  <td height="40" align="right">网址添加：</td>
+  <td><input type="text" name="webs" class="htinputcss" value="http://" /></td>
+  </tr>
+  <tr>
+    <td height="40" align="right">&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="提交" class="addbtn" />&nbsp;&nbsp;
+      <input type="reset" name="button2" id="button2" value="重置" class="resbtn" /></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>
